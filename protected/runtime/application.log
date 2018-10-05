@@ -672,3 +672,11 @@ REQUEST_URI=/yiiFramework/index.php?r=giix
 ---
 2018/10/05 15:54:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meubanco.u' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `u`.
 in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/05 16:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tarefa/index".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/index')
+#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/index
+---
