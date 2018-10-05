@@ -84,7 +84,7 @@ class Tarefa extends CActiveRecord
 			'descricao' => 'Descricao',
 			'situacao' => 'Situacao',
 			'conslusao' => 'Conslusao',
-			'idTipo' => 'Id Tipo',
+			'idTipo' => 'Tipo',
 		);
 	}
 

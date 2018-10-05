@@ -16,12 +16,12 @@
  * The followings are the available model relations:
  * @property Realizar[] $realizars
  */
-class usuario extends CActiveRecord
+class Usuario extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return usuario the static model class
+	 * @return Usuario the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

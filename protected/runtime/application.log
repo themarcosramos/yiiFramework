@@ -670,3 +670,5 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/yiiFramework/index.php?r=giix
 ---
+2018/10/05 15:54:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meubanco.u' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `u`.
+in /home/marcos/opensev/www/yiiFramework/index.php (13)

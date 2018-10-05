@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'realizar':
  * @property integer $idRealizar
  * @property string $criacao
- * @property string $modedicao
+ * @property string $modificacao
  * @property integer $idUsuario
  * @property integer $idTarefa
  *
@@ -43,10 +43,10 @@ class Realizar extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('idUsuario, idTarefa', 'numerical', 'integerOnly'=>true),
-			array('criacao, modedicao', 'safe'),
+			array('criacao, modificacao', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idRealizar, criacao, modedicao, idUsuario, idTarefa', 'safe', 'on'=>'search'),
+			array('idRealizar, criacao, modificacao, idUsuario, idTarefa', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,8 +70,8 @@ class Realizar extends CActiveRecord
 	{
 		return array(
 			'idRealizar' => 'Id Realizar',
-			'criacao' => 'Criacao',
-			'modedicao' => 'Modedicao',
+			'criacao' => 'Criação',
+			'modificacao' => 'Modificação',
 			'idUsuario' => 'Id Usuario',
 			'idTarefa' => 'Id Tarefa',
 		);
@@ -90,7 +90,7 @@ class Realizar extends CActiveRecord
 
 		$criteria->compare('idRealizar',$this->idRealizar);
 		$criteria->compare('criacao',$this->criacao,true);
-		$criteria->compare('modedicao',$this->modedicao,true);
+		$criteria->compare('modificacao',$this->modificacao,true);
 		$criteria->compare('idUsuario',$this->idUsuario);
 		$criteria->compare('idTarefa',$this->idTarefa);
 
