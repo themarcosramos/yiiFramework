@@ -19,13 +19,13 @@ $this->breadcrumbs=array(
 
 <?php else: ?>
 
-<p>
+<!--<p>
 If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
-</p>
+</p>-->
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<!--<?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'contact-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
@@ -80,6 +80,6 @@ If you have business inquiries or other questions, please fill out the following
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>--><!-- form -->
 
 <?php endif; ?>
