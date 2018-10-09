@@ -3,7 +3,7 @@ body
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
+	font: normal 11pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
 }
 
@@ -20,6 +20,7 @@ body
 	margin: 0;
 	padding: 0;
 	border-top: 3px solid #C9E0ED;
+	font-size: 3px;
 }
 
 #content
@@ -29,7 +30,7 @@ body
 
 #sidebar
 {
-	padding: 20px 20px 20px 0;
+	padding: 20px 20px 20px 10px;
 }
 
 #footer
@@ -43,13 +44,15 @@ body
 
 #logo
 {
-	padding: 10px 20px;
-	font-size: 200%;
+	padding: 0px 0px;
 }
 
 #mainmenu
 {
 	background:white url(bg.gif) repeat-x left top;
+	text-align: right;
+	font-size: 5px;
+	
 }
 
 #mainmenu ul
@@ -132,18 +135,21 @@ div.view
 {
 	padding: 10px;
 	margin: 10px 0;
-	border: 1px solid #C9E0ED;
+	border: 2px solid #C9E0ED;
 }
 
 div.breadcrumbs
 {
 	font-size: 0.9em;
 	padding: 5px 20px;
+	text-align: right;
+
 }
 
 div.breadcrumbs span
 {
 	font-weight: bold;
+	text-align: right;
 }
 
 div.search-form

@@ -70,8 +70,8 @@ class Realizar extends CActiveRecord
 	{
 		return array(
 			'idRealizar' => 'Id Realizar',
-			'criacao' => 'Criação',
-			'modificacao' => 'Modificação',
+			'criacao' => 'Criacao',
+			'modificacao' => 'Modificacao',
 			'idUsuario' => 'Id Usuario',
 			'idTarefa' => 'Id Tarefa',
 		);

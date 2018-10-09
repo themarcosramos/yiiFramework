@@ -11,7 +11,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<!--<p class="note">Fields with <span class="required">*</span> are required.</p>-->
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -24,6 +24,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'nascimento'); ?>
 		<?php echo $form->textField($model,'nascimento'); ?>
+
 		<?php echo $form->error($model,'nascimento'); ?>
 	</div>
 
@@ -64,3 +65,24 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'usuario-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		//'idUsuario',
+		'nome',
+		'nascimento',
+		'sexo',
+		'telefone',
+		'email',
+		/*
+		'login',
+		'senha',
+		*/
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
+)); ?>
+

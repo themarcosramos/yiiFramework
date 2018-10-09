@@ -1,682 +1,362 @@
-2018/10/05 13:13:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexr=gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php:484
+2018/10/08 12:00:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:484
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('indexr=gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('indexr=gii')
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('site/indexr=gii')
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('hola')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
 #5 {main}
-REQUEST_URI=/yiiFramework/index.php?r=site/indexr=gii
+REQUEST_URI=/yii-teste/index.php?r=hola
 ---
-2018/10/05 13:14:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index?r=gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php:484
+2018/10/08 12:00:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:484
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('index?r=gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('index?r=gii')
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('site/index?r=gi...')
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('index')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('hola/index')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
 #5 {main}
-REQUEST_URI=/yiiFramework/index.php?r=site/index?r=gii
+REQUEST_URI=/yii-teste/index.php?r=hola/index
 ---
-2018/10/05 13:14:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexr=gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php:484
+2018/10/08 12:01:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "holaqindex.php".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('indexr=gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('indexr=gii')
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('site/indexr=gii')
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('holaqindex.php')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-teste/index.php?r=holaqindex.php
+---
+2018/10/08 12:02:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:484
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('index')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('hola/index')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
 #5 {main}
-REQUEST_URI=/yiiFramework/index.php?r=site/indexr=gii
+REQUEST_URI=/yii-teste/index.php?r=hola/index
 ---
-2018/10/05 13:14:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
+2018/10/08 12:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sigii".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('sigii')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
 #3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
+REQUEST_URI=/yii-teste/index.php?r=sigii
 ---
-2018/10/05 13:14:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexr=gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php:484
+2018/10/08 12:04:32 [error] [php] Undefined variable: test (/home/marcos/opensev/www/yii-teste/protected/views/hola/index.php:1)
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('indexr=gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('indexr=gii')
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('site/indexr=gii')
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/yiiFramework/index.php?r=site/indexr=gii
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): HolaController->renderFile()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): HolaController->renderPartial()
+#2 /home/marcos/opensev/www/yii-teste/protected/controllers/HolaController.php(7): HolaController->render()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): HolaController->actionIndex()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(287): HolaController->runAction()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): HolaController->runActionWithFilters()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): HolaController->run()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/index.php?r=hola/index
+in /home/marcos/opensev/www/yii-teste/protected/views/hola/index.php (1)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/HolaController.php (7)
+in /home/marcos/opensev/www/yii-teste/index.php (13)
+2018/10/08 13:14:17 [error] [php] include(ActiveForm.php): failed to open stream: No such file or directory (/home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:423)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-teste/protected/views/usuario/index.php(22): spl_autoload_call()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): UsuarioController->renderInternal()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): UsuarioController->renderFile()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): UsuarioController->renderPartial()
+#5 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(128): UsuarioController->render()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionIndex()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): UsuarioController->filterAccessControl()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): UsuarioController->runActionWithFilters()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): UsuarioController->run()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/index.php?r=usuario/index
+in /home/marcos/opensev/www/yii-teste/protected/views/usuario/index.php (22)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php (128)
+in /home/marcos/opensev/www/yii-teste/index.php (13)
+2018/10/08 13:16:15 [error] [php] Undefined variable: model (/home/marcos/opensev/www/yii-teste/protected/views/usuario/index.php:31)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): UsuarioController->renderFile()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): UsuarioController->renderPartial()
+#2 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(128): UsuarioController->render()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionIndex()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): UsuarioController->filterAccessControl()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): UsuarioController->runActionWithFilters()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): UsuarioController->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/index.php?r=usuario/index
+in /home/marcos/opensev/www/yii-teste/protected/views/usuario/index.php (31)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php (128)
+in /home/marcos/opensev/www/yii-teste/index.php (13)
+2018/10/09 08:09:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-teste/index.php?r=usuario/view
 ---
-2018/10/05 13:14:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index r=gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php:484
+2018/10/09 08:35:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '11111999' for column 'nascimento' at row 1. The SQL statement executed was: INSERT INTO `usuario` (`nome`, `nascimento`, `sexo`, `telefone`, `email`, `login`, `senha`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php (73)
+in /home/marcos/opensev/www/yii-teste/index.php (13)
+2018/10/09 08:35:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '11111999' for column 'nascimento' at row 1. The SQL statement executed was: INSERT INTO `usuario` (`nome`, `nascimento`, `sexo`, `telefone`, `email`, `login`, `senha`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('index r=gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('index r=gii')
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('site/index r=gi...')
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/yiiFramework/index.php?r=site/index%20r=gii
----
-2018/10/05 13:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
----
-2018/10/05 13:15:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php?r=gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php:484
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('index.php?r=gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('index.php?r=gii')
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('site/index.php?...')
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/yiiFramework/index.php?r=site/index.php?r=gii
----
-2018/10/05 13:15:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
----
-2018/10/05 13:15:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "giix".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('giix')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=giix
----
-2018/10/05 13:16:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Giix".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('Giix')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=Giix
----
-2018/10/05 13:16:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Giix".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('Giix')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=Giix
----
-2018/10/05 13:16:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "giix".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('giix')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=giix
----
-2018/10/05 13:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/
----
-2018/10/05 13:18:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
----
-2018/10/05 13:18:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sgii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('sgii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=sgii
----
-2018/10/05 13:19:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
----
-2018/10/05 13:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
----
-2018/10/05 13:19:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
----
-2018/10/05 13:24:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii
----
-2018/10/05 13:31:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(73): CActiveRecord->save()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
 #16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
+REQUEST_URI=/yii-teste/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yii-teste/index.php?r=usuario/create
 ---
-2018/10/05 13:32:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
+2018/10/09 09:09:20 [error] [php] Undefined variable: model (/home/marcos/opensev/www/yii-teste/protected/views/site/login.php:28)
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): ModelCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/model
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): SiteController->renderFile()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /home/marcos/opensev/www/yii-teste/protected/controllers/SiteController.php(34): SiteController->render()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(287): SiteController->runAction()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/
+in /home/marcos/opensev/www/yii-teste/protected/views/site/login.php (28)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/SiteController.php (34)
+in /home/marcos/opensev/www/yii-teste/index.php (13)
+2018/10/09 09:09:26 [error] [php] Undefined variable: model (/home/marcos/opensev/www/yii-teste/protected/views/site/login.php:28)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): SiteController->renderFile()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /home/marcos/opensev/www/yii-teste/protected/controllers/SiteController.php(34): SiteController->render()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(287): SiteController->runAction()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/
+in /home/marcos/opensev/www/yii-teste/protected/views/site/login.php (28)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/SiteController.php (34)
+in /home/marcos/opensev/www/yii-teste/index.php (13)
+2018/10/09 10:15:15 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "field".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php(34): CComponent->__call('field', Array)
+#1 /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php(34): CActiveForm->field(Object(Usuario), 'sexo')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-teste/protected/views/usuario/create.php(18): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(79): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii-teste/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yii-teste/index.php?r=usuario/index
 ---
-2018/10/05 13:32:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
+2018/10/09 10:18:55 [error] [php] include(Html.php): failed to open stream: No such file or directory (/home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:423)
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): ModelCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/model
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
+#0 /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php(62): spl_autoload_call()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): UsuarioController->renderInternal()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): UsuarioController->renderFile()
+#4 /home/marcos/opensev/www/yii-teste/protected/views/usuario/create.php(18): UsuarioController->renderPartial()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): UsuarioController->renderInternal()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): UsuarioController->renderFile()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): UsuarioController->renderPartial()
+#9 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(79): UsuarioController->render()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): UsuarioController->filterAccessControl()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): UsuarioController->runActionWithFilters()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): UsuarioController->run()
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/index.php?r=usuario/create
+in /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php (62)
+in /home/marcos/opensev/www/yii-teste/protected/views/usuario/create.php (18)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php (79)
+2018/10/09 10:19:18 [error] [php] include(Html.php): failed to open stream: No such file or directory (/home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:423)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php(62): spl_autoload_call()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): UsuarioController->renderInternal()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): UsuarioController->renderFile()
+#4 /home/marcos/opensev/www/yii-teste/protected/views/usuario/create.php(18): UsuarioController->renderPartial()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): UsuarioController->renderInternal()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): UsuarioController->renderFile()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): UsuarioController->renderPartial()
+#9 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(79): UsuarioController->render()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): UsuarioController->filterAccessControl()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): UsuarioController->runActionWithFilters()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): UsuarioController->run()
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/index.php?r=usuario/create
+in /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php (62)
+in /home/marcos/opensev/www/yii-teste/protected/views/usuario/create.php (18)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php (79)
+2018/10/09 10:40:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-teste/index.php?r=usuario/view
+HTTP_REFERER=http://localhost/yii-teste/index.php?r=usuario/index
 ---
-2018/10/05 13:36:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
+2018/10/09 10:42:27 [error] [php] Undefined variable: model (/home/marcos/opensev/www/yii-teste/protected/views/usuario/index.php:25)
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): UsuarioController->renderFile()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): UsuarioController->renderPartial()
+#2 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(128): UsuarioController->render()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionIndex()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): UsuarioController->filterAccessControl()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): UsuarioController->runActionWithFilters()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): UsuarioController->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yii-teste/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-teste/index.php?r=usuario/index
+in /home/marcos/opensev/www/yii-teste/protected/views/usuario/index.php (25)
+in /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php (128)
+in /home/marcos/opensev/www/yii-teste/index.php (13)
+2018/10/09 10:43:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-teste/index.php?r=usuario/view
+HTTP_REFERER=http://localhost/yii-teste/index.php?r=usuario/index
 ---
-2018/10/05 13:38:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
+2018/10/09 10:51:37 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textRadio".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
 Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 13:49:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 13:50:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): ModelCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/model
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 13:53:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): ModelCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/model
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 13:53:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 13:56:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:02:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): ModelCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/model
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:02:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:03:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:04:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:23:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:23:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:26:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:26:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:26:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:26:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:38:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost'' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 14:39:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'meubanco.db'' in /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php:382
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(388): CDbConnection->init()
-#3 /home/marcos/opensev/yii-1.1.1.12/framework/base/CModule.php(104): CModule->getComponent('db')
-#4 /home/marcos/opensev/yii-1.1.1.12/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
-#5 /home/marcos/opensev/yii-1.1.1.12/framework/web/CFormModel.php(40): CrudCode->init()
-#6 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
-#7 /home/marcos/opensev/yii-1.1.1.12/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
-#8 /home/marcos/opensev/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
-#9 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#10 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#11 /home/marcos/opensev/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('')
-#13 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
-#14 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/crud
-HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
----
-2018/10/05 15:13:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/x".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/x')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=gii/x
----
-2018/10/05 15:13:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "giix".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('giix')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=giix
----
-2018/10/05 15:54:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meubanco.u' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `u`.
-in /home/marcos/opensev/www/yiiFramework/index.php (13)
-2018/10/05 16:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tarefa/index".' in /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php:287
-Stack trace:
-#0 /home/marcos/opensev/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/index')
-#1 /home/marcos/opensev/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/yiiFramework/index.php?r=tarefa/index
+#0 /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php(33): CComponent->__call('textRadio', Array)
+#1 /home/marcos/opensev/www/yii-teste/protected/views/usuario/_form.php(33): CActiveForm->textRadio(Object(Usuario), 'sexo', Array)
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-teste/protected/views/usuario/create.php(18): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yii-teste/protected/controllers/UsuarioController.php(79): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yii-teste/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii-teste/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yii-teste/index.php?r=usuario/index
 ---
