@@ -78,12 +78,12 @@ class Tarefa extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idTarefa' => 'Id Tarefa',
+			'idTarefa' => 'Tarefa',
 			'titulo' => 'Titulo',
 			'privacidade' => 'Privacidade',
 			'descricao' => 'Descricao',
-			'situacao' => 'Situacao',
-			'conslusao' => 'Conslusao',
+			'situacao' => 'Situação',
+			'conslusao' => 'Conslusão',
 			'idTipo' => 'Tipo',
 		);
 	}

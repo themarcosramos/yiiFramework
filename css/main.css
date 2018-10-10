@@ -5,6 +5,8 @@ body
 	color: #555;
 	font: normal 11pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
+	height: 1000px;
+	
 }
 
 #page
@@ -36,7 +38,7 @@ body
 #footer
 {
 	padding: 10px;
-	margin: 10px 20px;
+	margin: 10px 50px;
 	font-size: 0.8em;
 	text-align: center;
 	border-top: 1px solid #C9E0ED;
@@ -51,7 +53,9 @@ body
 {
 	background:white url(bg.gif) repeat-x left top;
 	text-align: right;
-	font-size: 5px;
+	font-size: 25px;
+	padding-bottom: 25px;
+	margin-bottom: 50px;
 	
 }
 
@@ -70,10 +74,11 @@ body
 {
 	color:#ffffff;
 	background-color:transparent;
-	font-size:12px;
+	font-size:14px;
 	font-weight:bold;
 	text-decoration:none;
-	padding:5px 8px;
+	padding:8px 10px;
+	font-family: sans-serif;
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
@@ -143,7 +148,7 @@ div.breadcrumbs
 	font-size: 0.9em;
 	padding: 5px 20px;
 	text-align: right;
-
+	margin-top: 10px;
 }
 
 div.breadcrumbs span

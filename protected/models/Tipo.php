@@ -6,11 +6,9 @@
  * The followings are the available columns in table 'tipo':
  * @property integer $idTipo
  * @property string $nome
- * @property integer $idTarefa
  *
  * The followings are the available model relations:
  * @property Tarefa[] $tarefas
- * @property Tarefa $idTarefa0
  */
 class Tipo extends CActiveRecord
 {
@@ -40,11 +38,10 @@ class Tipo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idTarefa', 'numerical', 'integerOnly'=>true),
 			array('nome', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idTipo, nome, idTarefa', 'safe', 'on'=>'search'),
+			array('idTipo, nome', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,7 +54,6 @@ class Tipo extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'tarefas' => array(self::HAS_MANY, 'Tarefa', 'idTipo'),
-			'idTarefa0' => array(self::BELONGS_TO, 'Tarefa', 'idTarefa'),
 		);
 	}
 
@@ -67,9 +63,8 @@ class Tipo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idTipo' => 'Id Tipo',
+			'idTipo' => 'Tipo',
 			'nome' => 'Nome',
-			'idTarefa' => 'Id Tarefa',
 		);
 	}
 
@@ -86,7 +81,6 @@ class Tipo extends CActiveRecord
 
 		$criteria->compare('idTipo',$this->idTipo);
 		$criteria->compare('nome',$this->nome,true);
-		$criteria->compare('idTarefa',$this->idTarefa);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -32,8 +32,9 @@
 				array('label'=>'Home', 'url'=>array('/site/index')),
 			//	array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 			//	array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Usuário', 'url'=>array('/usuario/index')),
+				array('label'=>'Usuários', 'url'=>array('/usuario/index')),
 				array('label'=>'Tarefas', 'url'=>array('/tarefa/index')),
+				array('label'=>'Tipos', 'url'=>array('/tipo/index')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			)
@@ -52,7 +53,7 @@
 	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+		<?php //echo Yii::powered(); ?>
 	</div><!-- footer -->
 
 </div><!-- page -->

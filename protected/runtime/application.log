@@ -360,3 +360,199 @@ Stack trace:
 REQUEST_URI=/yii-teste/index.php?r=usuario/create
 HTTP_REFERER=http://localhost/yii-teste/index.php?r=usuario/index
 ---
+2018/10/10 16:07:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meubanco.tarefa' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tarefa`.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php (125)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/10 16:07:56 [error] [exception.CDbException] exception 'CDbException' with message 'The table "tarefa" for active record class "Tarefa" cannot be found in the database.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Tarefa))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Tarefa')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(125): CActiveDataProvider->__construct('Tarefa')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionIndex()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('index')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/index')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
+---
+2018/10/10 16:27:19 [error] [exception.CException] exception 'CException' with message 'Property "Tipo.idTarefa" is not defined.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('idTarefa')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('idTarefa')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1887): CHtml::resolveValue(Object(Tipo), 'idTarefa')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1217): CHtml::activeInputField('text', Object(Tipo), 'idTarefa', Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CActiveForm.php(658): CHtml::activeTextField(Object(Tipo), 'idTarefa', Array)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tipo/_form.php(26): CActiveForm->textField(Object(Tipo), 'idTarefa')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yiiFramework/protected/views/tipo/create.php(18): CController->renderPartial('_form', Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#14 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoController.php(79): CController->render('create', Array)
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TipoController->actionCreate()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#25 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipo/create')
+#26 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipo/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipo/index
+---
+2018/10/10 16:27:24 [error] [exception.CException] exception 'CException' with message 'Property "Tipo.idTarefa" is not defined.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('idTarefa')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('idTarefa')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1887): CHtml::resolveValue(Object(Tipo), 'idTarefa')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1217): CHtml::activeInputField('text', Object(Tipo), 'idTarefa', Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CActiveForm.php(658): CHtml::activeTextField(Object(Tipo), 'idTarefa', Array)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tipo/_search.php(26): CActiveForm->textField(Object(Tipo), 'idTarefa')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yiiFramework/protected/views/tipo/admin.php(40): CController->renderPartial('_search', Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#14 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoController.php(143): CController->render('admin', Array)
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TipoController->actionAdmin()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('admin')
+#25 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipo/admin')
+#26 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipo/admin
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipo/index
+---
+2018/10/10 16:27:41 [error] [exception.CException] exception 'CException' with message 'Property "Tipo.idTarefa" is not defined.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('idTarefa')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('idTarefa')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1887): CHtml::resolveValue(Object(Tipo), 'idTarefa')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1217): CHtml::activeInputField('text', Object(Tipo), 'idTarefa', Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CActiveForm.php(658): CHtml::activeTextField(Object(Tipo), 'idTarefa', Array)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tipo/_form.php(26): CActiveForm->textField(Object(Tipo), 'idTarefa')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yiiFramework/protected/views/tipo/create.php(18): CController->renderPartial('_form', Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#14 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoController.php(79): CController->render('create', Array)
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TipoController->actionCreate()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#25 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipo/create')
+#26 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipo/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipo/index
+---
+2018/10/10 16:37:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=site/index
+---
+2018/10/10 16:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/index
+---
+2018/10/10 16:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipos/index
+---
+2018/10/10 16:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/create".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/create')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/create
+---
+2018/10/10 16:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?
+---
+2018/10/10 16:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/index
+---
+2018/10/10 16:40:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/index
+---
+2018/10/10 16:40:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tipos/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipos/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipos/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
+---

@@ -21,12 +21,6 @@
 		<?php echo $form->error($model,'nome'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'idTarefa'); ?>
-		<?php echo $form->textField($model,'idTarefa'); ?>
-		<?php echo $form->error($model,'idTarefa'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

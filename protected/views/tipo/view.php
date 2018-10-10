@@ -23,6 +23,5 @@ $this->menu=array(
 	'attributes'=>array(
 		'idTipo',
 		'nome',
-		'idTarefa',
 	),
 )); ?>

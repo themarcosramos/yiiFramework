@@ -13,9 +13,5 @@
 	<?php echo CHtml::encode($data->nome); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idTarefa')); ?>:</b>
-	<?php echo CHtml::encode($data->idTarefa); ?>
-	<br />
-
 
 </div>
