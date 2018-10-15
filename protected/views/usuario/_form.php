@@ -1,12 +1,10 @@
 <div class="form">
 
-
 <?php $form = $this->beginWidget('CActiveForm', array(
 	'id' => 'usuarios-form',
 	'enableAjaxValidation' => false,
 ));
 ?>
-
 	<p class="note">
 	   <?php echo Yii::t('app', 'Campos com '); ?> <span class="required">*</span> <?php echo Yii::t('app', 'são obrigatórios'); ?>.
 	</p>
@@ -90,7 +88,7 @@
 				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
-; ?>
+          ; ?>
 		<?php echo $form->error($model,'criacao'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -110,7 +108,7 @@
 				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
-; ?>
+         ; ?>
 		<?php echo $form->error($model,'modificacao'); ?>
 		</div><!-- row -->
 

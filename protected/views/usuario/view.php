@@ -32,7 +32,7 @@ $this->menu=array(
 	),
 )); ?>
 
-<h2><?php echo GxHtml::encode($model->getRelationLabel('tarefases')); ?></h2>
+<h2><?php echo GxHtml::encode($model->getRelationLabel('tarefas')); ?></h2>
 <?php
 	echo GxHtml::openTag('ul');
 	foreach($model->tarefases as $relatedModel) {

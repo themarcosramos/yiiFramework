@@ -2549,3 +2549,65 @@ Stack trace:
 REQUEST_URI=/yiiFramework/index.php?r=usuario/Cadastrar
 HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
 ---
+2018/10/15 13:28:14 [error] [exception.CException] exception 'CException' with message 'O alias "ext.maskedInput.MaskedInput" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:318
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWidgetFactory.php(147): YiiBase::import('ext.maskedInput...', true)
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(UsuarioController), 'ext.maskedInput...', Array)
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.maskedInput...', Array)
+#3 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/_form.php(66): CBaseController->widget('ext.maskedInput...', Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/create.php(19): CController->renderPartial('_form', Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#12 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(54): CController->render('create', Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#24 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
+---
+2018/10/15 13:46:54 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textFieldRow".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/_form.php(17): CComponent->__call('textFieldRow', Array)
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/_form.php(17): CActiveForm->textFieldRow(Object(Usuarios), 'nome', Array)
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/create.php(19): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(54): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
+---
