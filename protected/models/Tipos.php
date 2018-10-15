@@ -1,8 +1,8 @@
 <?php
 
-Yii::import('application.models._base.BaseTiposTarefas');
+Yii::import('application.models._base.BaseTipos');
 
-class TiposTarefas extends BaseTiposTarefas
+class Tipos extends BaseTipos
 {
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'privacidade'); ?>
-		<?php echo $form->textField($model, 'privacidade', array('maxlength' => 8)); ?>
+		<?php echo $form->textField($model, 'privacidade', array('maxlength' => 9)); ?>
 	</div>
 
 	<div class="row">

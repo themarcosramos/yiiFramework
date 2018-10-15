@@ -8,7 +8,8 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sistema de gerenciamento de tarefas',
-	 'language'=>'pt_br',
+	//'language'=>'pt_br',
+	'sourceLanguage'=>'pt_br',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -22,7 +23,9 @@ return array(
         'ext.bootstrap.behaviors.*',
         'ext.bootstrap.components.*',
         'ext.bootstrap.form.*',
-        'ext.bootstrap.widgets.*',
+		'ext.bootstrap.widgets.*',
+		'ext.maskedInput.*',
+		'ext.meiomask.*',
 	),
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
@@ -47,7 +50,7 @@ return array(
 		),
 		// Bootstrap
 		'bootstrap' => array(
-			'class' =>'ext.bootstrap.components.TbApi',   
+			'class' =>' ext.bootstrap.components.TbApi',   
 			'cdnUrl'=>"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/",
 		),
 		
@@ -84,7 +87,6 @@ return array(
 				*/
 			),
 		),
-
 	),
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']

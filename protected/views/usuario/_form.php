@@ -1,14 +1,14 @@
 <div class="form">
 
 
-<?php $form = $this->beginWidget('GxActiveForm', array(
+<?php $form = $this->beginWidget('CActiveForm', array(
 	'id' => 'usuarios-form',
 	'enableAjaxValidation' => false,
 ));
 ?>
 
 	<p class="note">
-		<?php echo Yii::t('app', 'Fields with'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'are required'); ?>.
+	   <?php echo Yii::t('app', 'Campos com '); ?> <span class="required">*</span> <?php echo Yii::t('app', 'são obrigatórios'); ?>.
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -20,7 +20,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'sexo'); ?>
-		<?php echo $form->textField($model, 'sexo', array('maxlength' => 9)); ?>
+		<?php echo $form->dropDownlist($model, 'sexo', array('Masculino' => 'Masculino', 'Feminino' => 'Feminino','Outros'=>'Outros')); ?>
 		<?php echo $form->error($model,'sexo'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -32,15 +32,24 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
 				),
-			));
-; ?>
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
+				),
+			));?>
 		<?php echo $form->error($model,'nascimento'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model, 'email', array('maxlength' => 150)); ?>
+		<?php echo $form->textField($model, 'email', array(
+			'maxlength' => 128,
+			'pattern' => '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$',
+			'placeholder' => 'exemplo@email.com',
+			'title' => "Formato exigido: exemplo@email.com",
+			));?>
 		<?php echo $form->error($model,'email'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -55,7 +64,13 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'senha'); ?>
-		<?php echo $form->textField($model, 'senha', array('maxlength' => 128)); ?>
+		<?php echo $form->passwordField($model, 'senha', array(
+			'minlength' => 6, 
+			'maxlength' => 128,
+			'pattern' => '(?:\\d+[a-z]|[a-z]+\\d)[a-z\\d]*',
+			'title' => "A senha deve conter letras e números",			
+			)); 
+		?>
 		<?php echo $form->error($model,'senha'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -67,7 +82,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				'maxlength' => '10', 
+				'title' => 'dd/mm/aaaa',
+				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>
@@ -82,7 +102,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				'maxlength' => '10', 
+				'title' => 'dd/mm/aaaa',
+				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>

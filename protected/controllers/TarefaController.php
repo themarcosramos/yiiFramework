@@ -2,6 +2,28 @@
 
 class TarefaController extends GxController {
 
+	public function filters() {
+		return array(
+            'accessControl',
+        );
+	}
+	
+	public function accessRules() {
+		return array(
+			array('allow',
+                'actions' => array('create','update','delete','admin','index','view'),
+                'roles' => array('admin'),
+			),	
+			array('allow',
+                'actions' => array('update','view','perfil'),
+                'users' => array('@'),
+			),		
+			array('deny',
+                'actions' => array('create','update','delete','admin','index','view','perfil'),
+                'users' => array('?'),
+            ), 
+        );
+    }
 
 	public function actionView($id) {
 		$this->render('view', array(

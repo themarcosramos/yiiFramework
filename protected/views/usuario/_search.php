@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'sexo'); ?>
-		<?php echo $form->textField($model, 'sexo', array('maxlength' => 9)); ?>
+		<?php echo $form->textField($model, 'sexo', array('maxlength' => 10)); ?>
 	</div>
 
 	<div class="row">
@@ -37,7 +37,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'email'); ?>
-		<?php echo $form->textField($model, 'email', array('maxlength' => 150)); ?>
+		<?php echo $form->textField($model, 'email', array('maxlength' => 128)); ?>
 	</div>
 
 	<div class="row">

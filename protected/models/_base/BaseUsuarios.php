@@ -43,9 +43,9 @@ abstract class BaseUsuarios extends GxActiveRecord {
 	public function rules() {
 		return array(
 			array('nome, sexo, email, login, telefone, senha', 'required'),
-			array('nome, email', 'length', 'max'=>150),
-			array('sexo', 'length', 'max'=>9),
-			array('login, senha', 'length', 'max'=>128),
+			array('nome', 'length', 'max'=>150),
+			array('sexo', 'length', 'max'=>10),
+			array('email, login, senha', 'length', 'max'=>128),
 			array('telefone', 'length', 'max'=>30),
 			array('nascimento, criacao, modificacao', 'safe'),
 			array('nascimento, criacao, modificacao', 'default', 'setOnEmpty' => true, 'value' => null),
@@ -66,16 +66,16 @@ abstract class BaseUsuarios extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'idUsuario' => Yii::t('app', 'Id Usuario'),
+			'idUsuario' => Yii::t('app', 'Usuario'),
 			'nome' => Yii::t('app', 'Nome'),
 			'sexo' => Yii::t('app', 'Sexo'),
-			'nascimento' => Yii::t('app', 'Nascimento'),
-			'email' => Yii::t('app', 'Email'),
+			'nascimento' => Yii::t('app', 'Data de nascimento'),
+			'email' => Yii::t('app', 'E-mail'),
 			'login' => Yii::t('app', 'Login'),
 			'telefone' => Yii::t('app', 'Telefone'),
 			'senha' => Yii::t('app', 'Senha'),
-			'criacao' => Yii::t('app', 'Criacao'),
-			'modificacao' => Yii::t('app', 'Modificacao'),
+			'criacao' => Yii::t('app', 'Data da Criação'),
+			'modificacao' => Yii::t('app', 'Data da Modificação'),
 			'tarefases' => null,
 		);
 	}

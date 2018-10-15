@@ -1,14 +1,14 @@
 <div class="form">
 
 
-<?php $form = $this->beginWidget('GxActiveForm', array(
-	'id' => 'tipos-tarefas-form',
+<?php $form = $this->beginWidget('CActiveForm', array(
+	'id' => 'tipos-form',
 	'enableAjaxValidation' => false,
 ));
 ?>
 
 	<p class="note">
-		<?php echo Yii::t('app', 'Fields with'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'are required'); ?>.
+		<?php echo Yii::t('app', 'Campos com '); ?> <span class="required">*</span> <?php echo Yii::t('app', 'são obrigatórios'); ?>.
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -27,7 +27,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>
@@ -42,7 +47,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>

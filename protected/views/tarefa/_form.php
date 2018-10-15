@@ -1,14 +1,14 @@
 <div class="form">
 
 
-<?php $form = $this->beginWidget('GxActiveForm', array(
+<?php $form = $this->beginWidget('CActiveForm', array(
 	'id' => 'tarefas-form',
 	'enableAjaxValidation' => false,
 ));
 ?>
 
 	<p class="note">
-		<?php echo Yii::t('app', 'Fields with'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'are required'); ?>.
+		<?php echo Yii::t('app', 'Campos com '); ?> <span class="required">*</span> <?php echo Yii::t('app', 'são obrigatórios '); ?>.
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -20,7 +20,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'privacidade'); ?>
-		<?php echo $form->textField($model, 'privacidade', array('maxlength' => 8)); ?>
+		<?php echo $form->dropDownlist($model, 'privacidade', array('Pública'=>'Pública', 'Privada' => 'Privada')); ?>
 		<?php echo $form->error($model,'privacidade'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -30,7 +30,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'T_status'); ?>
-		<?php echo $form->textField($model, 'T_status', array('maxlength' => 10)); ?>
+		<?php echo $form->dropDownlist($model,'T_status', array('Concluída'=>'Concluída','Pendente' => 'Pendente'));?>
 		<?php echo $form->error($model,'T_status'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -42,7 +42,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>
@@ -57,7 +62,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>
@@ -72,7 +82,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>
