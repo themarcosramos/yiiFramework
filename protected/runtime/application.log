@@ -2611,3 +2611,38 @@ Stack trace:
 REQUEST_URI=/yiiFramework/index.php?r=usuario/create
 HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
 ---
+2018/10/15 14:03:51 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.Telefone" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Telefone')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('Telefone')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1887): CHtml::resolveValue(Object(Usuarios), 'Telefone')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1217): CHtml::activeInputField('text', Object(Usuarios), 'Telefone', Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CMaskedTextField.php(73): CHtml::activeTextField(Object(Usuarios), 'Telefone', Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(174): CMaskedTextField->run()
+#6 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/_form.php(68): CBaseController->widget('CMaskedTextFiel...', Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#10 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/create.php(19): CController->renderPartial('_form', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#15 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(54): CController->render('create', Array)
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#26 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#27 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
+---

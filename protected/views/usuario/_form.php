@@ -57,7 +57,14 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'telefone'); ?>
-		<?php echo $form->textField($model, 'telefone', array('maxlength' => 30)); ?>
+		<?php 
+		$this->widget('CMaskedTextField', array(
+			'model' => $model,
+			'attribute' => 'telefone',
+			'mask' => '(99) ?99999-9999',
+			'htmlOptions' => array('size' => 30)
+			));
+		?>		
 		<?php echo $form->error($model,'telefone'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -112,7 +119,7 @@
 		<?php echo $form->error($model,'modificacao'); ?>
 		</div><!-- row -->
 
-		<label><?php echo GxHtml::encode($model->getRelationLabel('tarefases')); ?></label>
+		<label><?php //echo GxHtml::encode($model->getRelationLabel('tarefases')); ?></label>
 		<?php echo $form->checkBoxList($model, 'tarefases', GxHtml::encodeEx(GxHtml::listDataEx(Tarefas::model()->findAllAttributes(null, true)), false, true)); ?>
 
 <?php
