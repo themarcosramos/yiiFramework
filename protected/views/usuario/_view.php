@@ -1,43 +1,37 @@
-<?php
-/* @var $this UsuarioController */
-/* @var $data Usuario */
-?>
-
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idUsuario), array('view', 'id'=>$data->idUsuario)); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('idUsuario')); ?>:
+	<?php echo GxHtml::link(GxHtml::encode($data->idUsuario), array('view', 'id' => $data->idUsuario)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nome')); ?>:</b>
-	<?php echo CHtml::encode($data->nome); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('nome')); ?>:
+	<?php echo GxHtml::encode($data->nome); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nascimento')); ?>:</b>
-	<?php echo CHtml::encode($data->nascimento); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('sexo')); ?>:
+	<?php echo GxHtml::encode($data->sexo); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('sexo')); ?>:</b>
-	<?php echo CHtml::encode($data->sexo); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('nascimento')); ?>:
+	<?php echo GxHtml::encode($data->nascimento); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('telefone')); ?>:</b>
-	<?php echo CHtml::encode($data->telefone); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('email')); ?>:
+	<?php echo GxHtml::encode($data->email); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
-	<?php echo CHtml::encode($data->email); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('login')); ?>:
+	<?php echo GxHtml::encode($data->login); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('login')); ?>:</b>
-	<?php echo CHtml::encode($data->login); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('telefone')); ?>:
+	<?php echo GxHtml::encode($data->telefone); ?>
 	<br />
-
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('senha')); ?>:</b>
-	<?php echo CHtml::encode($data->senha); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('senha')); ?>:
+	<?php echo GxHtml::encode($data->senha); ?>
 	<br />
-
+	<?php echo GxHtml::encode($data->getAttributeLabel('criacao')); ?>:
+	<?php echo GxHtml::encode($data->criacao); ?>
+	<br />
+	<?php echo GxHtml::encode($data->getAttributeLabel('modificacao')); ?>:
+	<?php echo GxHtml::encode($data->modificacao); ?>
+	<br />
 	*/ ?>
 
 </div>

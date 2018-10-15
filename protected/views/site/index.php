@@ -30,6 +30,6 @@ should you have any questions.</p>-->
 	font-size: 40px;
 	margin-bottom: 50px;
 	">
-<p> ao sistema de  gerenciamente de  ativiadades <br/>
+<p> ao sistema de  gerenciamente de  tarefas  <br/>
 muito obrigado!</p>
 </span>

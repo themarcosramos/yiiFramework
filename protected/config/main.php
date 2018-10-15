@@ -7,8 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
-	//'theme'=>'classic',
+	'name'=>'Sistema de gerenciamento de tarefas',
+	 'language'=>'pt_br',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -17,26 +17,40 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.giix-components.*', 
+		'ext.bootstrap.helpers.*',
+        'ext.bootstrap.behaviors.*',
+        'ext.bootstrap.components.*',
+        'ext.bootstrap.form.*',
+        'ext.bootstrap.widgets.*',
 	),
-
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		
 		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
+			'class' => 'system.gii.GiiModule',
+			'generatorPaths' => array(
+				'ext.giix-core', // giix generator
+				'ext.bootstrap.gii'
+			),
 			'password'=>'123456',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			//'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		
 	),
-
 	// application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		// Bootstrap
+		'bootstrap' => array(
+			'class' =>'ext.bootstrap.components.TbApi',   
+			'cdnUrl'=>"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/",
+		),
+		
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -48,22 +62,12 @@ return array(
 			),
 		),
 		*/
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
-		// uncomment the following to use a MySQL database
-		
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=meubanco',
-			'emulatePrepare' => true,
-			'username' => 'Marcos',
-			'password' => '123456',
-			'charset' => 'utf8',
-		),
+		// database settings are configured in database.php
+		'db'=>require(dirname(__FILE__).'/database.php'),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
-			'errorAction'=>'site/error',
+			'errorAction'=>YII_DEBUG ? null : 'site/error',
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',
@@ -80,8 +84,8 @@ return array(
 				*/
 			),
 		),
-	),
 
+	),
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(

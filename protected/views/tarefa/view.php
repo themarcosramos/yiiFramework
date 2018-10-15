@@ -1,32 +1,42 @@
 <?php
-/* @var $this TarefaController */
-/* @var $model Tarefa */
 
-$this->breadcrumbs=array(
-	'Tarefas'=>array('index'),
-	$model->idTarefa,
+$this->breadcrumbs = array(
+	$model->label(2) => array('index'),
+	GxHtml::valueEx($model),
 );
 
 $this->menu=array(
-	array('label'=>'List Tarefa', 'url'=>array('index')),
-	array('label'=>'Create Tarefa', 'url'=>array('create')),
-	array('label'=>'Update Tarefa', 'url'=>array('update', 'id'=>$model->idTarefa)),
-	array('label'=>'Delete Tarefa', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idTarefa),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Tarefa', 'url'=>array('admin')),
+	array('label'=>Yii::t('app', 'List') . ' ' . $model->label(2), 'url'=>array('index')),
+	array('label'=>Yii::t('app', 'Create') . ' ' . $model->label(), 'url'=>array('create')),
+	array('label'=>Yii::t('app', 'Update') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->idTarefa)),
+	array('label'=>Yii::t('app', 'Delete') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idTarefa), 'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>Yii::t('app', 'Manage') . ' ' . $model->label(2), 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Tarefa #<?php echo $model->idTarefa; ?></h1>
+<h1><?php echo Yii::t('app', 'View') . ' ' . GxHtml::encode($model->label()) . ' ' . GxHtml::encode(GxHtml::valueEx($model)); ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'idTarefa',
-		'titulo',
-		'privacidade',
-		'descricao',
-		'situacao',
-		'conslusao',
-		'idTipo',
+	'data' => $model,
+	'attributes' => array(
+'idTarefa',
+'titulo',
+'privacidade',
+'descricao',
+'T_status',
+'conclusao',
+'criacao',
+'modificacao',
+array(
+			'name' => 'usuario0',
+			'type' => 'raw',
+			'value' => $model->usuario0 !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->usuario0)), array('usuarios/view', 'id' => GxActiveRecord::extractPkValue($model->usuario0, true))) : null,
+			),
+array(
+			'name' => 'tipo0',
+			'type' => 'raw',
+			'value' => $model->tipo0 !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->tipo0)), array('tipos/view', 'id' => GxActiveRecord::extractPkValue($model->tipo0, true))) : null,
+			),
 	),
 )); ?>
+

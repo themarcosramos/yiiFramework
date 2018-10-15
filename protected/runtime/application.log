@@ -556,3 +556,132 @@ Stack trace:
 REQUEST_URI=/yiiFramework/index.php?r=tipos/index
 HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
 ---
+2018/10/15 09:15:58 [error] [exception.CException] exception 'CException' with message 'O alias "" é inválido. Assegure-se de que ele aponta para um diretório existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:292
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/extensions/bootstrap/gii/bootstrap/BootstrapGenerator.php(11): YiiBase::import('\\BootstrapCode')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(316): require('/home/marcos/op...')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(198): YiiBase::import('ext.bootstrap.g...', true)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(333): YiiBase::createComponent(Array, 'bootstrap', Object(GiiModule))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(339): CWebApplication->createController('bootstrap/', Object(GiiModule))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(277): CWebApplication->createController('gii/bootstrap')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/bootstrap')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiFramework/index.php?r=gii/bootstrap
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii
+---
+2018/10/15 09:22:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "giix".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('giix')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=giix
+---
+2018/10/15 09:23:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "usuario/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=site/index
+---
+2018/10/15 09:23:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "usuario/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=site/index
+---
+2018/10/15 09:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "tarefa/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=site/index
+---
+2018/10/15 09:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "tipo/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipo/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipo/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=site/index
+---
+2018/10/15 09:32:19 [error] [php] include(Tipos.php): failed to open stream: No such file or directory (/home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:423)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php(165): Tarefas->getRelationLabel()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1173): Tarefas->getAttributeLabel()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1198): activeLabel()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CActiveForm.php(563): activeLabelEx()
+#7 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php(87): GxActiveForm->labelEx()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): TarefaController->renderInternal()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TarefaController->renderFile()
+#11 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php(19): TarefaController->renderPartial()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): TarefaController->renderInternal()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TarefaController->renderFile()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): TarefaController->renderPartial()
+#16 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(27): TarefaController->render()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionCreate()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(287): TarefaController->runAction()
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): TarefaController->runActionWithFilters()
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): TarefaController->run()
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /home/marcos/opensev/www/yiiFramework/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
+in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php (165)
+2018/10/15 09:32:22 [error] [php] include(Tipos.php): failed to open stream: No such file or directory (/home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:423)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php(165): Tarefas->getRelationLabel()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1173): Tarefas->getAttributeLabel()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CActiveForm.php(548): activeLabel()
+#6 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_search.php(84): GxActiveForm->label()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): TarefaController->renderInternal()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TarefaController->renderFile()
+#10 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/admin.php(37): TarefaController->renderPartial()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): TarefaController->renderInternal()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TarefaController->renderFile()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): TarefaController->renderPartial()
+#15 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(73): TarefaController->render()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionAdmin()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(287): TarefaController->runAction()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): TarefaController->runActionWithFilters()
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): TarefaController->run()
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yiiFramework/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/admin
+in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxActiveRecord.php (165)
+2018/10/15 09:36:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "tipo/index".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipo/index')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipo/index
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
+---
