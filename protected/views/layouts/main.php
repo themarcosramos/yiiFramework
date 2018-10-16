@@ -35,8 +35,8 @@
 				array('label'=>'Usuários', 'url'=>array('/usuario/index')),
 				array('label'=>'Tarefas', 'url'=>array('/tarefa/index')),
 				array('label'=>'Tipos', 'url'=>array('/TipoTarefa/index')),
-			//	array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-			//	array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			)
 		)); ?>
 	</div><!-- mainmenu -->

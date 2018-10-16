@@ -20,7 +20,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'privacidade'); ?>
-		<?php echo $form->dropDownlist($model, 'privacidade', array('Pública'=>'Pública', 'Privada' => 'Privada')); ?>
+		<?php echo $form->dropDownlist($model, 'privacidade', array('Publica'=>'Pública', 'Privada' => 'Privada')); ?>
 		<?php echo $form->error($model,'privacidade'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -30,7 +30,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'T_status'); ?>
-		<?php echo $form->dropDownlist($model,'T_status', array('Concluída'=>'Concluída','Pendente' => 'Pendente'));?>
+		<?php echo $form->dropDownlist($model,'T_status', array('Concluida'=>'Concluída','Pendente' => 'Pendente'));?>
 		<?php echo $form->error($model,'T_status'); ?>
 		</div><!-- row -->
 		<div class="row">

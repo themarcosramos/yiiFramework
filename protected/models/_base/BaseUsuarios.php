@@ -20,7 +20,7 @@
  * @property string $criacao
  * @property string $modificacao
  *
- * @property Tarefas[] $tarefases
+ * @property Tarefas[] $tarefas
  */
 abstract class BaseUsuarios extends GxActiveRecord {
 
@@ -55,7 +55,7 @@ abstract class BaseUsuarios extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'tarefases' => array(self::HAS_MANY, 'Tarefas', 'usuario'),
+			'tarefas' => array(self::HAS_MANY, 'Tarefas', 'usuario'),
 		);
 	}
 
@@ -66,7 +66,7 @@ abstract class BaseUsuarios extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'idUsuario' => Yii::t('app', 'Usuario'),
+			'idUsuario' => Yii::t('app', 'Usuário'),
 			'nome' => Yii::t('app', 'Nome'),
 			'sexo' => Yii::t('app', 'Sexo'),
 			'nascimento' => Yii::t('app', 'Data de nascimento'),
@@ -74,9 +74,9 @@ abstract class BaseUsuarios extends GxActiveRecord {
 			'login' => Yii::t('app', 'Login'),
 			'telefone' => Yii::t('app', 'Telefone'),
 			'senha' => Yii::t('app', 'Senha'),
-			'criacao' => Yii::t('app', 'Data da Criação'),
-			'modificacao' => Yii::t('app', 'Data da Modificação'),
-			'tarefases' => null,
+			'criacao' => Yii::t('app', 'Data da criação'),
+			'modificacao' => Yii::t('app', 'Data da modificação'),
+			'tarefas' => null,
 		);
 	}
 

@@ -2646,3 +2646,325 @@ Stack trace:
 REQUEST_URI=/yiiFramework/index.php?r=usuario/create
 HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
 ---
+2018/10/16 08:18:25 [error] [exception.CException] exception 'CException' with message 'O alias "" é inválido. Assegure-se de que ele aponta para um diretório existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:292
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/extensions/bootstrap/gii/bootstrap/BootstrapGenerator.php(11): YiiBase::import('\\BootstrapCode')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(316): require('/home/marcos/op...')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(198): YiiBase::import('ext.bootstrap.g...', true)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(333): YiiBase::createComponent(Array, 'bootstrap', Object(GiiModule))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(339): CWebApplication->createController('bootstrap/', Object(GiiModule))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(277): CWebApplication->createController('gii/bootstrap')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/bootstrap')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiFramework/index.php?r=gii/bootstrap
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
+---
+2018/10/16 08:19:33 [error] [exception.CException] exception 'CException' with message 'O alias "" é inválido. Assegure-se de que ele aponta para um diretório existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:292
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/extensions/bootstrap/gii/bootstrap/BootstrapGenerator.php(11): YiiBase::import('\\BootstrapCode')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(316): require('/home/marcos/op...')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(198): YiiBase::import('ext.bootstrap.g...', true)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(333): YiiBase::createComponent(Array, 'bootstrap', Object(GiiModule))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(339): CWebApplication->createController('bootstrap/', Object(GiiModule))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(277): CWebApplication->createController('gii/bootstrap')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/bootstrap')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiFramework/index.php?r=gii/bootstrap
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii/default/index
+---
+2018/10/16 08:22:41 [error] [exception.CException] exception 'CException' with message 'O alias "" é inválido. Assegure-se de que ele aponta para um diretório existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:292
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/extensions/bootstrap/gii/bootstrap/BootstrapGenerator.php(11): YiiBase::import('\\BootstrapCode')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(316): require('/home/marcos/op...')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(198): YiiBase::import('ext.bootstrap.g...', true)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(333): YiiBase::createComponent(Array, 'bootstrap', Object(GiiModule))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(339): CWebApplication->createController('bootstrap/', Object(GiiModule))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(277): CWebApplication->createController('gii/bootstrap')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/bootstrap')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiFramework/index.php?r=gii/bootstrap
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii
+---
+2018/10/16 08:26:37 [error] [exception.CException] exception 'CException' with message 'O alias "" é inválido. Assegure-se de que ele aponta para um diretório existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:292
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/extensions/bootstrap/gii/bootstrap/BootstrapGenerator.php(11): YiiBase::import('\\BootstrapCode')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(316): require('/home/marcos/op...')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(198): YiiBase::import('ext.bootstrap.g...', true)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(333): YiiBase::createComponent(Array, 'bootstrap', Object(GiiModule))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(339): CWebApplication->createController('bootstrap/', Object(GiiModule))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(277): CWebApplication->createController('gii/bootstrap')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/bootstrap')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiFramework/index.php?r=gii/bootstrap
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii
+---
+2018/10/16 08:27:15 [error] [exception.CException] exception 'CException' with message 'O alias "" é inválido. Assegure-se de que ele aponta para um diretório existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:292
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/extensions/bootstrap/gii/bootstrap/BootstrapGenerator.php(11): YiiBase::import('\\BootstrapCode')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(316): require('/home/marcos/op...')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(198): YiiBase::import('ext.bootstrap.g...', true)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(333): YiiBase::createComponent(Array, 'bootstrap', Object(GiiModule))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(339): CWebApplication->createController('bootstrap/', Object(GiiModule))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(277): CWebApplication->createController('gii/bootstrap')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/bootstrap')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiFramework/index.php?r=gii/bootstrap
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii
+---
+2018/10/16 08:28:25 [error] [exception.CException] exception 'CException' with message 'O alias "" é inválido. Assegure-se de que ele aponta para um diretório existente.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php:292
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/extensions/bootstrap/gii/bootstrap/BootstrapGenerator.php(11): YiiBase::import('\\BootstrapCode')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(316): require('/home/marcos/op...')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/YiiBase.php(198): YiiBase::import('ext.bootstrap.g...', true)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(333): YiiBase::createComponent(Array, 'bootstrap', Object(GiiModule))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(339): CWebApplication->createController('bootstrap/', Object(GiiModule))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(277): CWebApplication->createController('gii/bootstrap')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/bootstrap')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiFramework/index.php?r=gii/bootstrap
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=gii
+---
+2018/10/16 09:27:58 [error] [exception.CException] exception 'CException' with message 'A propriedade "Tipos.tarefases" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('tarefases')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('tarefases')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1608): CHtml::resolveValue(Object(Tipos), 'tarefases')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CActiveForm.php(796): CHtml::activeCheckBoxList(Object(Tipos), 'tarefases', Array, Array)
+#4 /home/marcos/opensev/www/yiiFramework/protected/views/tipoTarefa/_form.php(63): CActiveForm->checkBoxList(Object(Tipos), 'tarefases', Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yiiFramework/protected/views/tipoTarefa/create.php(19): CController->renderPartial('_form', Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#13 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(52): CController->render('create', Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TipoTarefaController->actionCreate()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#24 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/crea...')
+#25 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#26 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---
+2018/10/16 09:28:50 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.tarefases" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('tarefases')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('tarefases')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php(1608): CHtml::resolveValue(Object(Usuarios), 'tarefases')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/widgets/CActiveForm.php(796): CHtml::activeCheckBoxList(Object(Usuarios), 'tarefases', Array, Array)
+#4 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/_form.php(123): CActiveForm->checkBoxList(Object(Usuarios), 'tarefases', Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yiiFramework/protected/views/usuario/create.php(19): CController->renderPartial('_form', Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#13 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(54): CController->render('create', Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#24 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#25 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#26 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/index
+---
+2018/10/16 10:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "viewUser" solicitada.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:484
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(271): CController->missingAction('viewUser')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('viewUser')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/viewUse...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/viewUser
+---
+2018/10/16 10:10:03 [error] [exception.CException] exception 'CException' with message 'Tarefas and its behaviors do not have a method or closure named "getTarefasPublicas".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTarefasPubli...', Array)
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): CActiveRecord->__call('getTarefasPubli...', Array)
+#2 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): Tarefas->getTarefasPublicas()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('tarefasPublicas', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(148): CController->render('tarefasPublicas', Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionTarefasPublicas()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('TarefasPublicas')
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/TarefasP...')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/TarefasPublicas
+---
+2018/10/16 10:10:10 [error] [exception.CException] exception 'CException' with message 'Tarefas and its behaviors do not have a method or closure named "getTarefasPublicas".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTarefasPubli...', Array)
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): CActiveRecord->__call('getTarefasPubli...', Array)
+#2 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): Tarefas->getTarefasPublicas()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('tarefasPublicas', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(148): CController->render('tarefasPublicas', Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionTarefasPublicas()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('tarefasPublicas')
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/tarefasP...')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/tarefasPublicas
+---
+2018/10/16 10:13:19 [error] [exception.CException] exception 'CException' with message 'Tarefas and its behaviors do not have a method or closure named "getTarefasPublicas".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTarefasPubli...', Array)
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): CActiveRecord->__call('getTarefasPubli...', Array)
+#2 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): Tarefas->getTarefasPublicas()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('tarefasPublicas', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(148): CController->render('tarefasPublicas', Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionTarefasPublicas()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('tarefaspublicas')
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/tarefasp...')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/tarefaspublicas
+---
+2018/10/16 10:14:32 [error] [exception.CException] exception 'CException' with message 'Tarefas and its behaviors do not have a method or closure named "getTarefasPublicas".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTarefasPubli...', Array)
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): CActiveRecord->__call('getTarefasPubli...', Array)
+#2 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): Tarefas->getTarefasPublicas()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('tarefasPublicas', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(147): CController->render('tarefasPublicas', Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionTarefasPublicas()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('tarefaspublicas')
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/tarefasp...')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/tarefaspublicas
+---
+2018/10/16 10:14:36 [error] [exception.CException] exception 'CException' with message 'Tarefas and its behaviors do not have a method or closure named "getTarefasPublicas".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTarefasPubli...', Array)
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): CActiveRecord->__call('getTarefasPubli...', Array)
+#2 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): Tarefas->getTarefasPublicas()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('tarefasPublicas', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(147): CController->render('tarefasPublicas', Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionTarefasPublicas()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('tarefasPublicas')
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/tarefasP...')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/tarefasPublicas
+---
+2018/10/16 10:14:38 [error] [exception.CException] exception 'CException' with message 'Tarefas and its behaviors do not have a method or closure named "getTarefasPublicas".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTarefasPubli...', Array)
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): CActiveRecord->__call('getTarefasPubli...', Array)
+#2 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/tarefasPublicas.php(6): Tarefas->getTarefasPublicas()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('tarefasPublicas', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(147): CController->render('tarefasPublicas', Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionTarefasPublicas()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('tarefaspublicas')
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/tarefasp...')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/tarefaspublicas
+---

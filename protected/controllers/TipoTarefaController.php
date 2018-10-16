@@ -25,30 +25,36 @@ class TipoTarefaController extends GxController {
         );
     }
 
-	public function actionView($id) {
-		$this->render('view', array(
-			'model' => $this->loadModel($id, 'Tipos'),
-		));
+	public function actionView($id) {	
+		if(Yii::app()->user->name == 'admin') {
+			$this->render('view', array(
+				'model' => $this->loadModel($id,'Tipo'),
+			));		
+		} else {
+			$this->redirect(array('tarefa/userHome'));
+		}	
 	}
 
-	public function actionCreate() {
-		$model = new Tipos;
+	public function actionCreate() {	
+		if(Yii::app()->user->name == 'admin') {
+			$model = new Tipos;
 
+			if (isset($_POST['Tipo'])) {
+				$model->setAttributes($_POST['Tipo']);									
 
-		if (isset($_POST['Tipos'])) {
-			$model->setAttributes($_POST['Tipos']);
-
-			if ($model->save()) {
-				if (Yii::app()->getRequest()->getIsAjaxRequest())
-					Yii::app()->end();
-				else
-					$this->redirect(array('view', 'id' => $model->idTipo));
+				if ($model->save()) {
+					if (Yii::app()->getRequest()->getIsAjaxRequest())
+						Yii::app()->end();
+					else
+						$this->redirect(array('view', 'id' => $model->idTipo));
+				}
 			}
-		}
-
-		$this->render('create', array( 'model' => $model));
+			$this->render('create', array('model' => $model));	
+		} else {
+			
+			$this->redirect(array('tarefa/userHome'));
+		}	
 	}
-
 	public function actionUpdate($id) {
 		$model = $this->loadModel($id, 'Tipos');
 

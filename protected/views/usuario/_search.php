@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'sexo'); ?>
-		<?php echo $form->textField($model, 'sexo', array('maxlength' => 10)); ?>
+		<?php echo $form->dropDownlist($model, 'sexo', array('Masculino' => 'Masculino', 'Feminino' => 'Feminino','Outros'=>'Outros')); ?>
 	</div>
 
 	<div class="row">
@@ -29,15 +29,24 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
 				),
-			));
-; ?>
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
+				),
+			));?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model, 'email'); ?>
-		<?php echo $form->textField($model, 'email', array('maxlength' => 128)); ?>
+		<?php echo $form->textField($model, 'email', array(
+			'maxlength' => 128,
+			'pattern' => '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$',
+			'placeholder' => 'exemplo@email.com',
+			'title' => "Formato exigido: exemplo@email.com",
+			));?>
 	</div>
 
 	<div class="row">
@@ -47,7 +56,14 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'telefone'); ?>
-		<?php echo $form->textField($model, 'telefone', array('maxlength' => 30)); ?>
+		<?php 
+		$this->widget('CMaskedTextField', array(
+			'model' => $model,
+			'attribute' => 'telefone',
+			'mask' => '(99) ?99999-9999',
+			'htmlOptions' => array('size' => 30)
+			));
+		?>
 	</div>
 
 	<div class="row">
@@ -64,10 +80,15 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				'maxlength' => '10', 
+				'title' => 'dd/mm/aaaa',
+				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
-; ?>
+          ; ?>
 	</div>
 
 	<div class="row">
@@ -79,10 +100,15 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				'maxlength' => '10', 
+				'title' => 'dd/mm/aaaa',
+				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
-; ?>
+         ; ?>
 	</div>
 
 	<div class="row buttons">

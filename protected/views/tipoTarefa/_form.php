@@ -59,8 +59,8 @@
 		<?php echo $form->error($model,'modificacao'); ?>
 		</div><!-- row -->
 
-		<label><?php echo GxHtml::encode($model->getRelationLabel('tarefases')); ?></label>
-		<?php echo $form->checkBoxList($model, 'tarefases', GxHtml::encodeEx(GxHtml::listDataEx(Tarefas::model()->findAllAttributes(null, true)), false, true)); ?>
+		<label><?php echo GxHtml::encode($model->getRelationLabel('tarefas')); ?></label>
+		<?php echo $form->checkBoxList($model, 'tarefas', GxHtml::encodeEx(GxHtml::listDataEx(Tarefas::model()->findAllAttributes(null, true)), false, true)); ?>
 
 <?php
 echo GxHtml::submitButton(Yii::t('app', 'Save'));

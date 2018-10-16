@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'privacidade'); ?>
-		<?php echo $form->textField($model, 'privacidade', array('maxlength' => 9)); ?>
+		<?php echo $form->dropDownlist($model, 'privacidade', array('Publica'=>'Pública', 'Privada' => 'Privada')); ?>
 	</div>
 
 	<div class="row">
@@ -27,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'T_status'); ?>
-		<?php echo $form->textField($model, 'T_status', array('maxlength' => 10)); ?>
+		<?php echo $form->dropDownlist($model,'T_status', array('Concluida'=>'Concluída','Pendente' => 'Pendente'));?>
 	</div>
 
 	<div class="row">
@@ -39,7 +39,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>
@@ -54,7 +59,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>
@@ -69,7 +79,12 @@
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
+				'dateFormat' => 'dd/mm/yy',
+				),
+			'htmlOptions'=>array(
+				 'maxlength' => '10', 
+				 'title' => 'dd/mm/aaaa',
+				 'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
 				),
 			));
 ; ?>

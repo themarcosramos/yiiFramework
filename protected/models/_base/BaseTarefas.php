@@ -70,7 +70,7 @@ abstract class BaseTarefas extends GxActiveRecord {
 	public function attributeLabels() {
 		return array(
 			'idTarefa' => Yii::t('app', 'Tarefa'),
-			'titulo' => Yii::t('app', 'Titulo'),
+			'titulo' => Yii::t('app', 'Título'),
 			'privacidade' => Yii::t('app', 'Privacidade'),
 			'descricao' => Yii::t('app', 'Descrição'),
 			'T_status' => Yii::t('app', 'Status'),

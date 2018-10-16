@@ -14,7 +14,7 @@
  * @property string $criacao
  * @property string $modificacao
  *
- * @property Tarefas[] $tarefases
+ * @property Tarefas[] $tarefas
  */
 abstract class BaseTipos extends GxActiveRecord {
 
@@ -46,7 +46,7 @@ abstract class BaseTipos extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'tarefases' => array(self::HAS_MANY, 'Tarefas', 'tipo'),
+			'tarefas' => array(self::HAS_MANY, 'Tarefas', 'tipo'),
 		);
 	}
 
@@ -57,11 +57,11 @@ abstract class BaseTipos extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'idTipo' => Yii::t('app', 'Id Tipo'),
+			'idTipo' => Yii::t('app', 'Tipo'),
 			'nome' => Yii::t('app', 'Nome'),
-			'criacao' => Yii::t('app', 'Criacao'),
-			'modificacao' => Yii::t('app', 'Modificacao'),
-			'tarefases' => null,
+			'criacao' => Yii::t('app', 'Data da criação'),
+			'modificacao' => Yii::t('app', 'Data da modificação'),
+			'tarefas' => null,
 		);
 	}
 
