@@ -55,7 +55,7 @@ abstract class BaseUsuarios extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'tarefas' => array(self::HAS_MANY, 'Tarefas', 'usuario'),
+			'tarefases' => array(self::HAS_MANY, 'Tarefas', 'usuario'),
 		);
 	}
 
@@ -79,7 +79,21 @@ abstract class BaseUsuarios extends GxActiveRecord {
 			'tarefas' => null,
 		);
 	}
-
+	public function beforeSave(){
+		$this->nascimento = date('Y-m-d', strtotime($this->nascimento));
+		$this->modificacao = date('Y-m-d', strtotime($this->modificacao));
+		$this->criacao = date('Y-m-d', strtotime($this->criacao));
+		return parent::beforeSave();
+	}
+	
+	public function afterFind(){
+		//$this->nascimento= str_replace('/', '-', $this->nascimento);
+		//date("d-m-Y", strtotime($this->nascimento) );
+		$this->nascimento = date("d/m/Y", strtotime($this->nascimento));
+		$this->modificacao = date("d/m/Y", strtotime($this->modificacao));
+		$this->criacao = date("d/m/Y", strtotime($this->criacao));
+		return parent::afterFind();
+	}
 	public function search() {
 		$criteria = new CDbCriteria;
 

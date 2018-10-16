@@ -46,7 +46,7 @@ abstract class BaseTipos extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'tarefas' => array(self::HAS_MANY, 'Tarefas', 'tipo'),
+			'tarefases' => array(self::HAS_MANY, 'Tarefas', 'tipo'),
 		);
 	}
 
@@ -64,6 +64,7 @@ abstract class BaseTipos extends GxActiveRecord {
 			'tarefas' => null,
 		);
 	}
+
 
 	public function search() {
 		$criteria = new CDbCriteria;
