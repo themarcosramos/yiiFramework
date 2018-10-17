@@ -4058,3 +4058,359 @@ REQUEST_URI=/yiiFramework/index.php?r=site/login
 in /home/marcos/opensev/www/yiiFramework/protected/components/UserIdentity.php (36)
 in /home/marcos/opensev/www/yiiFramework/protected/models/LoginForm.php (54)
 in /home/marcos/opensev/www/yiiFramework/protected/controllers/SiteController.php (98)
+2018/10/17 16:41:30 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:41:53 [warning] [application] Failed to set unsafe attribute "tarefases" of "Tipos".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (43)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:45:51 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:49:13 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:49:13 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'teste3' for key 'login'. A declaração SQL executada foi: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (45)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:49:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'teste3' for key 'login'. The SQL statement executed was: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(45): CActiveRecord->save()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/create
+---
+2018/10/17 16:50:08 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:51:02 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:51:14 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). A declaração SQL executada foi: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=3.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (83)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:51:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). The SQL statement executed was: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=3' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('3')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(83): CActiveRecord->delete()
+#3 [internal function]: UsuarioController->actionDelete('3')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario%2Fdelete&id=3&ajax=usuarios-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/admin
+---
+2018/10/17 16:51:18 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). A declaração SQL executada foi: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=3.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (83)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:51:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). The SQL statement executed was: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=3' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('3')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(83): CActiveRecord->delete()
+#3 [internal function]: UsuarioController->actionDelete('3')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario%2Fdelete&id=3&ajax=usuarios-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/admin
+---
+2018/10/17 16:51:36 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). A declaração SQL executada foi: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=3.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (83)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 16:51:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). The SQL statement executed was: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=3' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('3')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(83): CActiveRecord->delete()
+#3 [internal function]: UsuarioController->actionDelete('3')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario%2Fdelete&id=3&ajax=usuarios-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/admin
+---
+2018/10/17 16:53:24 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:11:16 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:12:03 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:12:03 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'teste@gmail.com' for key 'email'. A declaração SQL executada foi: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (45)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:12:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'teste@gmail.com' for key 'email'. The SQL statement executed was: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(45): CActiveRecord->save()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/create
+---
+2018/10/17 17:12:26 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:24:46 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:24:58 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (62)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:26:45 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (62)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:27:00 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (62)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:27:28 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (62)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:27:38 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (62)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:29:35 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (62)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:31:08 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.root" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('root')
+#1 /home/marcos/opensev/www/yiiFramework/protected/models/_base/BaseUsuarios.php(94): CActiveRecord->__get('root')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1803): BaseUsuarios->afterFind()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1291): CActiveRecord->populateRecord(Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1426): CActiveRecord->query(Object(CDbCriteria))
+#5 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php(138): CActiveRecord->findByPk('13')
+#6 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(59): GxController->loadModel('13', 'Usuarios')
+#7 [internal function]: UsuarioController->actionUpdate('13')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('update')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/update')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/update&id=13
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=13
+---
+2018/10/17 17:31:10 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.root" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('root')
+#1 /home/marcos/opensev/www/yiiFramework/protected/models/_base/BaseUsuarios.php(94): CActiveRecord->__get('root')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1803): BaseUsuarios->afterFind()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1291): CActiveRecord->populateRecord(Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1426): CActiveRecord->query(Object(CDbCriteria))
+#5 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php(138): CActiveRecord->findByPk('13')
+#6 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(30): GxController->loadModel('13', 'Usuarios')
+#7 [internal function]: UsuarioController->actionView('13')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/view&id=13
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/update&id=13
+---
+2018/10/17 17:31:12 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.root" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('root')
+#1 /home/marcos/opensev/www/yiiFramework/protected/models/_base/BaseUsuarios.php(94): CActiveRecord->__get('root')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1803): BaseUsuarios->afterFind()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1291): CActiveRecord->populateRecord(Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1426): CActiveRecord->query(Object(CDbCriteria))
+#5 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php(138): CActiveRecord->findByPk('13')
+#6 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(59): GxController->loadModel('13', 'Usuarios')
+#7 [internal function]: UsuarioController->actionUpdate('13')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('update')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/update')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/update&id=13
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=13
+---
+2018/10/17 17:31:13 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.root" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('root')
+#1 /home/marcos/opensev/www/yiiFramework/protected/models/_base/BaseUsuarios.php(94): CActiveRecord->__get('root')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1803): BaseUsuarios->afterFind()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1291): CActiveRecord->populateRecord(Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1426): CActiveRecord->query(Object(CDbCriteria))
+#5 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php(138): CActiveRecord->findByPk('13')
+#6 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(30): GxController->loadModel('13', 'Usuarios')
+#7 [internal function]: UsuarioController->actionView('13')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/view&id=13
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/update&id=13
+---
+2018/10/17 17:31:14 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.root" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('root')
+#1 /home/marcos/opensev/www/yiiFramework/protected/models/_base/BaseUsuarios.php(94): CActiveRecord->__get('root')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1803): BaseUsuarios->afterFind()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1291): CActiveRecord->populateRecord(Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1426): CActiveRecord->query(Object(CDbCriteria))
+#5 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php(138): CActiveRecord->findByPk('13')
+#6 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(59): GxController->loadModel('13', 'Usuarios')
+#7 [internal function]: UsuarioController->actionUpdate('13')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('update')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/update')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/update&id=13
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=13
+---
+2018/10/17 17:31:15 [error] [exception.CException] exception 'CException' with message 'A propriedade "Usuarios.root" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('root')
+#1 /home/marcos/opensev/www/yiiFramework/protected/models/_base/BaseUsuarios.php(94): CActiveRecord->__get('root')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1803): BaseUsuarios->afterFind()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1291): CActiveRecord->populateRecord(Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1426): CActiveRecord->query(Object(CDbCriteria))
+#5 /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php(138): CActiveRecord->findByPk('13')
+#6 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(30): GxController->loadModel('13', 'Usuarios')
+#7 [internal function]: UsuarioController->actionView('13')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/marcos/opensev/www/yiiFramework/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/view&id=13
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/update&id=13
+---
+2018/10/17 17:31:45 [warning] [application] Failed to set unsafe attribute "tarefases" of "Usuarios".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (62)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)
+2018/10/17 17:40:20 [warning] [application] Failed to set unsafe attribute "tarefases" of "Tipos".
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (43)
+in /home/marcos/opensev/www/yiiFramework/index.php (13)

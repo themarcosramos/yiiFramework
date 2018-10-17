@@ -44,14 +44,14 @@ abstract class BaseTipos extends GxActiveRecord {
 		);
 	}
 	public function beforeSave(){
-		$this->modificacao = date('Y-m-d', strtotime($this->modificacao));
-		$this->criacao = date('Y-m-d', strtotime($this->criacao));
+		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;
+		(!empty($this->criacao))?$this->criacao=date('Y-m-d',strtotime($this->criacao)):"" ;
 		return parent::beforeSave();
 	}
 	
 	public function afterFind(){
-		$this->modificacao = date("d/m/Y", strtotime($this->modificacao));
-		$this->criacao = date("d/m/Y", strtotime($this->criacao));
+		(!empty($this->modificacao))?$this->modificacao=date('d/m/Y',strtotime($this->modificacao)):"" ;
+		(!empty($this->criacao))?$this->criacao=date('d/m/Y',strtotime($this->criacao)):"" ;
 		return parent::afterFind();
 	}
 

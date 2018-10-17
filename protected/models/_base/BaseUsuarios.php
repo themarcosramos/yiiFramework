@@ -80,19 +80,16 @@ abstract class BaseUsuarios extends GxActiveRecord {
 		);
 	}
 	public function beforeSave(){
-		$this->nascimento = date('Y-m-d', strtotime($this->nascimento));
-		$this->modificacao = date('Y-m-d', strtotime($this->modificacao));
-		$this->criacao = date('Y-m-d', strtotime($this->criacao));
+		(!empty( $this->nascimento))?$this->nascimento=date('Y-m-d',strtotime($this->nascimento)):"" ;
+		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;
+		(!empty($this->criacao))?$this->criacao=date('Y-m-d',strtotime($this->criacao)):"" ;
 		return parent::beforeSave();
 	}
 	
 	public function afterFind(){
-		//$this->nascimento= str_replace('/', '-', $this->nascimento);
-		//date("d-m-Y", strtotime($this->nascimento) );
-		$this->nascimento = date("d/m/Y", strtotime($this->nascimento));
-		$this->modificacao = date("d/m/Y", strtotime($this->modificacao));
-		$this->criacao = date("d/m/Y", strtotime($this->criacao));
-		return parent::afterFind();
+		(!empty( $this->nascimento))?$this->nascimento=date('d/m/Y',strtotime($this->nascimento)):"" ;
+		(!empty($this->modificacao))?$this->modificacao=date('d/m/Y',strtotime($this->modificacao)):"" ;
+		(!empty($this->criacao))?$this->criacao=date('d/m/Y',strtotime($this->criacao)):"" ;
 	}
 	public function search() {
 		$criteria = new CDbCriteria;

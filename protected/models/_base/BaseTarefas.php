@@ -55,16 +55,16 @@ abstract class BaseTarefas extends GxActiveRecord {
 		);
 	}
 	public function beforeSave(){
-		$this->conclusao = date('Y-m-d', strtotime($this->conclusao));
-		$this->modificacao = date('Y-m-d', strtotime($this->modificacao));
-		$this->criacao = date('Y-m-d', strtotime($this->criacao));
+		(!empty($this->conclusao))?$this->conclusao=date('Y-m-d',strtotime($this->conclusao)):"" ;
+		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;
+		(!empty($this->criacao))?$this->criacao=date('Y-m-d',strtotime($this->criacao)):"" ;
 		return parent::beforeSave();
 	}
 	
 	public function afterFind(){
-		$this->conclusao = date("d/m/Y", strtotime($this->conclusao));
-		$this->modificacao = date("d/m/Y", strtotime($this->modificacao));
-		$this->criacao = date("d/m/Y", strtotime($this->criacao));
+		(!empty($this->conclusao))?$this->conclusao=date('d/m/Y',strtotime($this->conclusao)):"" ;
+		(!empty($this->modificacao))?$this->modificacao=date('d/m/Y',strtotime($this->modificacao)):"" ;
+		(!empty($this->criacao))?$this->criacao=date('d/m/Y',strtotime($this->criacao)):"" ;
 		return parent::afterFind();
 	}
 
