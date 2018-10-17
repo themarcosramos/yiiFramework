@@ -56,17 +56,7 @@
 		<?php echo $form->error($model,'login'); ?>
 		</div><!-- row -->
 		<div class="row">
-		<?php echo $form->labelEx($model,'telefone'); ?>
-		<?php 
-		$this->widget('CMaskedTextField', array(
-			'model' => $model,
-			'attribute' => 'telefone',
-			'mask' => '(99) ?99999-9999',
-			'htmlOptions' => array('size' => 30)
-			));
-		?>		
-		<?php echo $form->error($model,'telefone'); ?>
-		</div><!-- row -->
+	
 		<div class="row">
 		<?php echo $form->labelEx($model,'senha'); ?>
 		<?php echo $form->passwordField($model, 'senha', array(
@@ -77,6 +67,17 @@
 			)); 
 		?>
 		<?php echo $form->error($model,'senha'); ?>
+		</div><!-- row -->
+		<?php echo $form->labelEx($model,'telefone'); ?>
+		<?php 
+		$this->widget('CMaskedTextField', array(
+			'model' => $model,
+			'attribute' => 'telefone',
+			'mask' => '(99) ?99999-9999',
+			'htmlOptions' => array('size' => 30)
+			));
+		?>		
+		<?php echo $form->error($model,'telefone'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'criacao'); ?>

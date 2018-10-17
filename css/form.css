@@ -36,13 +36,51 @@
 
 div.form
 {
+	width: 700px;
+	background-color: #fff;
+	margin: 20px auto 10px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5) ;
+	padding:10px;
 }
-
-div.form input,
-div.form textarea,
 div.form select
 {
 	margin: 0.2em 0 0.5em 0;
+	width: 100px;
+	height: 30px;
+	border: 2px solid #aaaa;
+	border-radius: 4px;
+}
+div.form input{
+	margin: 20px 0px 20px;
+    width: 320px;
+	height: 30px;
+	border: 2px solid #aaaa;
+	border-radius: 4px;
+	
+}
+div.form input[type="checkbox"]{
+	width: 15px;
+	height: 20px;
+	margin-top: 10;
+}
+
+div.form input[type="password"]{
+	width: 190px;
+	height: 30px;
+	margin-top: 10;
+}
+
+div.form input[type="submit"]{
+
+	width: 150px;
+	height: 30px;
+}
+div.form textarea{
+	margin: 2.00px 6.00px;
+    width: 320px;
+	height: 116px;
+	border: 2px solid #aaaa;
+	border-radius: 4px;
 }
 
 div.form fieldset
@@ -56,13 +94,14 @@ div.form fieldset
 div.form label
 {
 	font-weight: bold;
-	font-size: 0.9em;
+	font-size: 1.0em;
 	display: block;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 div.form .row
 {
-	margin: 5px 0;
+	margin: 10px 0;
 }
 
 div.form .hint
@@ -74,7 +113,7 @@ div.form .hint
 
 div.form .note
 {
-	font-style: italic;
+	font-style: Arial;
 }
 
 div.form span.required
@@ -141,11 +180,10 @@ div.form .errorSummary ul
 
 div.wide.form label
 {
-	float: left;
-	margin-right: 10px;
-	position: relative;
-	text-align: right;
-	width: 100px;
+	font-weight: bold;
+	font-size: 0.9em;
+	display: block;
+
 }
 
 div.wide.form .row
@@ -157,4 +195,5 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 {
 	clear: left;
 	padding-left: 110px;
+	size: 50px;
 }

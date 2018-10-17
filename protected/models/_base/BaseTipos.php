@@ -43,6 +43,17 @@ abstract class BaseTipos extends GxActiveRecord {
 			array('idTipo, nome, criacao, modificacao', 'safe', 'on'=>'search'),
 		);
 	}
+	public function beforeSave(){
+		$this->modificacao = date('Y-m-d', strtotime($this->modificacao));
+		$this->criacao = date('Y-m-d', strtotime($this->criacao));
+		return parent::beforeSave();
+	}
+	
+	public function afterFind(){
+		$this->modificacao = date("d/m/Y", strtotime($this->modificacao));
+		$this->criacao = date("d/m/Y", strtotime($this->criacao));
+		return parent::afterFind();
+	}
 
 	public function relations() {
 		return array(

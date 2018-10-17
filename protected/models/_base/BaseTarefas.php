@@ -54,6 +54,19 @@ abstract class BaseTarefas extends GxActiveRecord {
 			array('idTarefa, titulo, privacidade, descricao, T_status, conclusao, criacao, modificacao, usuario, tipo', 'safe', 'on'=>'search'),
 		);
 	}
+	public function beforeSave(){
+		$this->conclusao = date('Y-m-d', strtotime($this->conclusao));
+		$this->modificacao = date('Y-m-d', strtotime($this->modificacao));
+		$this->criacao = date('Y-m-d', strtotime($this->criacao));
+		return parent::beforeSave();
+	}
+	
+	public function afterFind(){
+		$this->conclusao = date("d/m/Y", strtotime($this->conclusao));
+		$this->modificacao = date("d/m/Y", strtotime($this->modificacao));
+		$this->criacao = date("d/m/Y", strtotime($this->criacao));
+		return parent::afterFind();
+	}
 
 	public function relations() {
 		return array(

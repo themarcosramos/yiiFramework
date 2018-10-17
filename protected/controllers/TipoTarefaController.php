@@ -28,7 +28,7 @@ class TipoTarefaController extends GxController {
 	public function actionView($id) {	
 		if(Yii::app()->user->name == 'admin') {
 			$this->render('view', array(
-				'model' => $this->loadModel($id,'Tipo'),
+				'model' => $this->loadModel($id,'Tipos'),
 			));		
 		} else {
 			$this->redirect(array('tarefa/userHome'));
@@ -39,8 +39,8 @@ class TipoTarefaController extends GxController {
 		if(Yii::app()->user->name == 'admin') {
 			$model = new Tipos;
 
-			if (isset($_POST['Tipo'])) {
-				$model->setAttributes($_POST['Tipo']);									
+			if (isset($_POST['Tipos'])) {
+				$model->setAttributes($_POST['Tipos']);									
 
 				if ($model->save()) {
 					if (Yii::app()->getRequest()->getIsAjaxRequest())
@@ -55,50 +55,68 @@ class TipoTarefaController extends GxController {
 			$this->redirect(array('tarefa/userHome'));
 		}	
 	}
-	public function actionUpdate($id) {
-		$model = $this->loadModel($id, 'Tipos');
 
-
-		if (isset($_POST['Tipos'])) {
-			$model->setAttributes($_POST['Tipos']);
-
-			if ($model->save()) {
-				$this->redirect(array('view', 'id' => $model->idTipo));
+	public function actionUpdate($id) {			
+		if(Yii::app()->user->name == 'admin') {
+			$model = $this->loadModel($id, 'Tipos');
+			
+			if (isset($_POST['Tipos'])) {
+				$model->setAttributes($_POST['Tipos']);
+				if ($model->save()) {
+					$this->redirect(array('view', 'id' => $model->ID_Tipo_Tarefa));
+				}
 			}
-		}
-
-		$this->render('update', array(
+			$this->render('update', array(
 				'model' => $model,
-				));
+			));	
+		} else {	
+			$this->redirect(array('tarefa/userHome'));
+		}	
 	}
 
-	public function actionDelete($id) {
-		if (Yii::app()->getRequest()->getIsPostRequest()) {
-			$this->loadModel($id, 'Tipos')->delete();
-
-			if (!Yii::app()->getRequest()->getIsAjaxRequest())
-				$this->redirect(array('admin'));
-		} else
-			throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));
+	public function actionDelete($id) {	
+		if(Yii::app()->user->name == 'admin') {
+		
+			if (Yii::app()->getRequest()->getIsPostRequest()) {
+				$this->loadModel($id,'Tipos')->delete();
+				if (!Yii::app()->getRequest()->getIsAjaxRequest())
+					$this->redirect(array('admin'));
+			} else
+				throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));
+		} else {
+			
+			$this->redirect(array('tarefa/userHome'));
+		}	
 	}
 
 	public function actionIndex() {
+	  if(Yii::app()->user->name == 'admin') {
 		$dataProvider = new CActiveDataProvider('Tipos');
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));
+	  }else {
+			$this->redirect(array('tarefa/userHome'));
+		}	
 	}
 
 	public function actionAdmin() {
-		$model = new Tipos('search');
-		$model->unsetAttributes();
-
-		if (isset($_GET['Tipos']))
-			$model->setAttributes($_GET['Tipos']);
-
-		$this->render('admin', array(
-			'model' => $model,
-		));
+		
+		if(Yii::app()->user->name == 'admin') {
+		
+			$model = new Tipos('search');
+			$model->unsetAttributes();
+	
+			if (isset($_GET['Tipos']))
+				$model->setAttributes($_GET['Tipos']);
+	
+			$this->render('admin', array(
+				'model' => $model,
+			));
+		} else {
+			
+			$this->redirect(array('tarefa/userHome'));
+		}	
 	}
 
 }

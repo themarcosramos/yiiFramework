@@ -11,7 +11,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 		<div class="row">
-		<?php echo $form->labelEx($model,'titulo'); ?>
+		<?php echo $form->labelEx($model,'título'); ?>
 		<?php echo $form->textField($model, 'titulo', array('maxlength'=> 150)); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 		</div><!-- row -->
@@ -22,7 +22,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'descricao'); ?>
-		<?php echo $form->textArea($model, 'descricao',array('maxlength' => 250)); ?>
+		<?php echo $form->textarea($model, 'descricao',array('maxlength' => 250)); ?>
 		<?php echo $form->error($model,'descricao'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -100,7 +100,8 @@
 		<?php echo $form->dropDownList($model, 'tipo', GxHtml::listDataEx(Tipos::model()->findAllAttributes(null, true))); ?>
 		<?php echo $form->error($model,'tipo'); ?>
 		</div><!-- row -->
-<?php
+
+<?php 
 echo GxHtml::submitButton(Yii::t('app', 'Save'));
 $this->endWidget();
 ?>

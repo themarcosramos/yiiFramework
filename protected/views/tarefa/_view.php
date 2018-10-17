@@ -1,8 +1,8 @@
 <div class="view">
 
-	<?php echo GxHtml::encode($data->getAttributeLabel('idTarefa')); ?>:
-	<?php echo GxHtml::link(GxHtml::encode($data->idTarefa), array('view', 'id' => $data->idTarefa)); ?>
-	<br />
+<!--<?php //echo GxHtml::encode($data->getAttributeLabel('idTarefa')); ?>:
+	<?php //echo GxHtml::link(GxHtml::encode($data->idTarefa), array('view', 'id' => $data->idTarefa)); ?>
+	<br />-->
 
 	<?php echo GxHtml::encode($data->getAttributeLabel('titulo')); ?>:
 	<?php echo GxHtml::encode($data->titulo); ?>

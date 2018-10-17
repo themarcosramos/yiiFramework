@@ -32,7 +32,7 @@ class TarefaController extends GxController {
 			));
 		} else { 
 			$this->render('viewTarefa', array(
-				'model' => $this->loadModel($id, 'Tarefas'),
+				'model' => $this->loadModel($id,'Tarefas'),
 			));
 		}		
 	}
@@ -42,7 +42,7 @@ class TarefaController extends GxController {
 			$model = new Tarefas;
 			if (isset($_POST['Tarefas'])) {
 				$model->setAttributes($_POST['Tarefas']);
-				if($model->Privacidade == 'Publica') {
+				if($model->privacidade == 'publica') {
 					$model->usuario = null;
 				}
 				if ($model->save()) {
@@ -79,20 +79,18 @@ class TarefaController extends GxController {
 			));
 		}
 	}
-
+	
 	private function VerifacarUpdates($model) {
-		if($model->Status == "Concluida") {
+		if($model->T_status== "Concluida") {
 			$model->conclusao = date("Y-m-d H:i:s");
 		} else {
 			$model->conclusao = null;
 		}
-		if($model->Privacidade == 'Publica') {
+		if($model->privacidade == 'Publica') {
 			$model->usuario = null;
 		} 
 		return $model;
 	}
-
-
 	public function actionDelete($id) {			
 		if(Yii::app()->user->name == 'admin') {
 			if (Yii::app()->getRequest()->getIsPostRequest()) {
