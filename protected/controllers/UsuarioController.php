@@ -51,7 +51,7 @@ class UsuarioController extends GxController {
 			}
 			$this->render('create', array( 'model' => $model));	
 		} else {
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('tarefa/index'));
 		}		
 	}
 
@@ -86,7 +86,7 @@ class UsuarioController extends GxController {
 			} else
 				throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));		
 		} else {
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('tarefa/index'));
 		}	
 	}
 
@@ -97,7 +97,7 @@ class UsuarioController extends GxController {
 				'dataProvider' => $dataProvider,
 			));	
 		} else {
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('tarefa/index'));
 		}		
 	}
 
@@ -113,7 +113,7 @@ class UsuarioController extends GxController {
 				'model' => $model,
 			));				
 		} else {
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('tarefa/index'));
 		}
 	}
 

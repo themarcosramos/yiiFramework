@@ -31,7 +31,7 @@ class TipoTarefaController extends GxController {
 				'model' => $this->loadModel($id,'Tipos'),
 			));		
 		} else {
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('TipoTarefa/index'));
 		}	
 	}
 
@@ -96,7 +96,10 @@ class TipoTarefaController extends GxController {
 			'dataProvider' => $dataProvider,
 		));
 	  }else {
-			$this->redirect(array('tarefa/userHome'));
+		$dataProvider = new CActiveDataProvider('Tipos');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
 		}	
 	}
 

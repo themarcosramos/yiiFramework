@@ -99,8 +99,8 @@ class SiteController extends Controller
 								
 				if($model->username == 'admin') {
 					$this->redirect(Yii::app()->user->returnUrl);
-				} else {
-					$this->redirect('index.php?r=tarefa/userHome');					
+				} else if ($model->validate() && $model->login()) {
+					$this->redirect('index.php?r=tarefa/index');				
 				}
 				
 			}

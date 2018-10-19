@@ -15,7 +15,7 @@ class TarefaController extends GxController {
                 'roles' => array('admin'),
 			),	
 			array('allow',
-                'actions' => array('update','view','perfil'),
+                'actions' => array('update','view','perfil','create'),
                 'users' => array('@'),
 			),		
 			array('deny',
@@ -54,7 +54,7 @@ class TarefaController extends GxController {
 			}
 			$this->render('create', array( 'model' => $model));
 		} else {
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('tarefa/Create'));
 		}
 	}
 
@@ -101,20 +101,35 @@ class TarefaController extends GxController {
 			} else
 				throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));			
 		} else {	
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('tarefa/index'));
 		}	
 	}
 
-	public function actionIndex() {
+	public function actionIndex(){   
+		$user=Usuarios::model()->findByPk(Yii::app()->user->id);
+		
 		if(Yii::app()->user->name == 'admin') {
+		
 			$dataProvider = new CActiveDataProvider('Tarefas');
 			$this->render('index', array(
 				'dataProvider' => $dataProvider,
-			));			
-		} else {
-			$this->redirect(array('tarefa/userHome'));
-		}	
-	}
+			));	}
+        else{
+            $dataProvider=new CActiveDataProvider('Tarefas', array(
+                'criteria'=>array(
+                    'condition'=>'Usuario=:ids or privacidade like "Publica"',
+                    'order'=>'T_status, conclusao, criacao',
+                    'params'=>array(':ids'=>Yii::app()->user->id)
+                )
+			));
+			$this->render('index',array(
+				'dataProvider'=>$dataProvider,
+			));
+            }
+       /* $this->render('index',array(
+            'dataProvider'=>$dataProvider,
+        ));*/
+    }
 
 	public function actionAdmin() {
 		if(Yii::app()->user->name == 'admin') {
@@ -127,12 +142,12 @@ class TarefaController extends GxController {
 				'model' => $model,
 			));			
 		} else {
-			$this->redirect(array('tarefa/userHome'));
+			$this->redirect(array('tarefa/index'));
 		}	
 	}
 
 	public function actionTarefasPublicas() {	
-		$this->layout = '//layouts/column1';
+		//$this->layout = '//layouts/column1';
 		$model = new Tarefas();
 		$model->unsetAttributes();
 
@@ -159,8 +174,11 @@ class TarefaController extends GxController {
 	}
 
 	public function actionUserHome() {
+
 		$this->layout = '//layouts/column1';
+
 		$model = new Tarefas('search');	
+
 		$model->unsetAttributes();
 
 		if (isset($_GET['Tarefas']))

@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
+
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii-1.1.1.12/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';

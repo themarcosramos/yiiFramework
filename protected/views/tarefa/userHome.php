@@ -1,6 +1,6 @@
 <?php
 	echo "<h3 class=''>Bem Vindo ".Yii::app()->user->name."!</h3><br>";
-	echo "<h4>Essas são as suas Tarefas Pendentes:</h4>";
+	echo "<h4> Essas são as suas Tarefas Pendentes:</h4>";
 
 ?>
 <?php 
