@@ -27,18 +27,44 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-			//	array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-			//	array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Usuários', 'url'=>array('/usuario/index')),
-				array('label'=>'Tarefas', 'url'=>array('/tarefa/index')),
-				array('label'=>'Tipos', 'url'=>array('/TipoTarefa/index')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			)
-		)); ?>
+	<?php
+
+      if(Yii::app()->user->name == 'admin') {
+
+	 echo '<div id="mainmenu">';
+
+	$this->widget('zii.widgets.CMenu',array(
+		'items'=>array(
+			array('label'=>'Home',  'url'=>array('/site/index')),
+			array('label'=>'Usuários', 'url'=>array('/usuario/index'),'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Tarefas', 'url'=>array('/tarefa/index'),'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Tipos', 'url'=>array('/TipoTarefa/index'), 'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+			array('label'=>'Sair ' .Yii::app()->user->name.'?', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+		),
+	)); 
+	echo '</div><!-- mainmenu -->';
+} else {
+	echo '<div id="mainmenu">';
+
+	$this->widget('zii.widgets.CMenu',array(
+		'items'=>array(
+			array('label'=>'Home', 'url'=>array('/site/index'), 'visible'=>Yii::app()->user->isGuest),
+			array('label'=>'Início', 'url'=>array('/tarefa/userHome'), 'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>ucfirst(Yii::app()->user->name), 'url'=>array('/usuario/perfil'), 'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Tarefas de '.ucfirst(Yii::app()->user->name), 'url'=>array('/tarefa/userTarefas'), 'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Tarefas Públicas','url'=>array('/tarefa/tarefasPublicas'), 'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Cadastar uma Tarefa'.ucfirst(Yii::app()->user->name), 'url'=>array('/tarefa/create'),'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Criar um tipo  de tarefa','url'=>array('/TipoTarefa/create'),'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+			array('label'=>'Sair  '. ucfirst(Yii::app()->user->name).'?', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+		),
+	)); 	
+	echo '</div><!-- mainmenu -->';
+
+}
+
+?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

@@ -52,6 +52,6 @@ class UserIdentity extends CUserIdentity
 		return !$this->errorCode;				
 	}
 	return $this->idUsuario;
-}
+	}
 
 }

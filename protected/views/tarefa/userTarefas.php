@@ -27,7 +27,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'header' => 'Tipo de Tarefa',
             'name'=>'tipo',
             'value'=>'GxHtml::valueEx($data->tipo0)',
-            'filter'=>GxHtml::listDataEx(TipoTarefa::model()->findAllAttributes(null, true)),
+            'filter'=>GxHtml::listDataEx(Tipos::model()->findAllAttributes(null, true)),
         ),
         array(
             'header' => 'Status',

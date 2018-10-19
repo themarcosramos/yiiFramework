@@ -12,37 +12,38 @@ class TarefaController extends GxController {
 		return array(
 			array('allow',
                 'actions' => array('create','update','delete','admin','index','view'),
-                'roles' => array('admin'),
+				'roles' => array('admin'),
+				
 			),	
 			array('allow',
-                'actions' => array('update','view','perfil','create'),
-                'users' => array('@'),
+                'actions' => array('update','view','userHome','userTarefas','userTarefas','tarefasPublicas'),
 			),		
 			array('deny',
-                'actions' => array('create','update','delete','admin','index','view','perfil'),
-                'users' => array('?'),
+                'actions' => array('update','delete','admin','index','view','userHome','userTarefas','tarefasPublicas'),
+				'users' => array('?'),
+
             ), 
         );
     }
 
 	public function actionView($id) {
-		if(Yii::app()->user->name == 'admin') {
+		if(Yii::app()->user->name == 'admin') {	
 			$this->render('view', array(
 				'model' => $this->loadModel($id, 'Tarefas'),
 			));
 		} else { 
 			$this->render('viewTarefa', array(
-				'model' => $this->loadModel($id,'Tarefas'),
+				'model' => $this->loadModel($id, 'Tarefas'),
 			));
 		}		
 	}
 
-	public function actionCreate() {	
-		if(Yii::app()->user->name == 'admin') {
-			$model = new Tarefas;
+	public function actionCreate() {
+		$model = new Tarefas;	
+		//if(Yii::app()->user->name == 'admin') {
 			if (isset($_POST['Tarefas'])) {
 				$model->setAttributes($_POST['Tarefas']);
-				if($model->privacidade == 'publica') {
+				if($model->privacidade == 'Publica') {
 					$model->usuario = null;
 				}
 				if ($model->save()) {
@@ -53,18 +54,18 @@ class TarefaController extends GxController {
 				}
 			}
 			$this->render('create', array( 'model' => $model));
-		} else {
-			$this->redirect(array('tarefa/Create'));
-		}
+		//} else {
+			//$this->redirect(array('tarefa/userHome'));
+			$this->render('create', array( 'model' => $model));
+	//	}
 	}
 
 	public function actionUpdate($id) {	
-		$model = $this->loadModel($id, 'Tarefas');
 
+		$model = $this->loadModel($id, 'Tarefas');
 		if (isset($_POST['Tarefas'])) {
 			$model->setAttributes($_POST['Tarefas']);
-			$model = $this->VerifacarUpdates($model);
-
+			$model = $this->verificaUpdate($model);
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->idTarefa));
 			}
@@ -73,89 +74,76 @@ class TarefaController extends GxController {
 			$this->render('update', array(
 				'model' => $model,
 			));
+		
 		} else {
+			
 			$this->render('updateTarefa', array(
 				'model' => $model,
 			));
 		}
 	}
-	
-	private function VerifacarUpdates($model) {
-		if($model->T_status== "Concluida") {
-			$model->conclusao = date("Y-m-d H:i:s");
+	private function verificaUpdate($model) {
+
+		if($model->T_status == "Concluida") {
+			$model->conclusao = date("Y-m-d ");
 		} else {
 			$model->conclusao = null;
 		}
 		if($model->privacidade == 'Publica') {
-			$model->usuario = null;
+			$model->Usuario = null;
 		} 
+
 		return $model;
 	}
+
 	public function actionDelete($id) {			
 		if(Yii::app()->user->name == 'admin') {
+		
 			if (Yii::app()->getRequest()->getIsPostRequest()) {
 				$this->loadModel($id, 'Tarefas')->delete();
-
 				if (!Yii::app()->getRequest()->getIsAjaxRequest())
 					$this->redirect(array('admin'));
 			} else
 				throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));			
-		} else {	
-			$this->redirect(array('tarefa/index'));
+		} else {
+			
+			$this->redirect(array('tarefa/userHome'));
 		}	
 	}
 
-	public function actionIndex(){   
-		$user=Usuarios::model()->findByPk(Yii::app()->user->id);
-		
+	public function actionIndex() {
 		if(Yii::app()->user->name == 'admin') {
-		
 			$dataProvider = new CActiveDataProvider('Tarefas');
 			$this->render('index', array(
 				'dataProvider' => $dataProvider,
-			));	}
-        else{
-            $dataProvider=new CActiveDataProvider('Tarefas', array(
-                'criteria'=>array(
-                    'condition'=>'Usuario=:ids or privacidade like "Publica"',
-                    'order'=>'T_status, conclusao, criacao',
-                    'params'=>array(':ids'=>Yii::app()->user->id)
-                )
-			));
-			$this->render('index',array(
-				'dataProvider'=>$dataProvider,
-			));
-            }
-       /* $this->render('index',array(
-            'dataProvider'=>$dataProvider,
-        ));*/
-    }
+			));			
+		} else {	
+			$this->redirect(array('tarefa/userHome'));
+		}	
+	}
 
 	public function actionAdmin() {
 		if(Yii::app()->user->name == 'admin') {
 			$model = new Tarefas('search');
 			$model->unsetAttributes();
-
 			if (isset($_GET['Tarefas']))
 				$model->setAttributes($_GET['Tarefas']);
 			$this->render('admin', array(
 				'model' => $model,
 			));			
 		} else {
-			$this->redirect(array('tarefa/index'));
+			
+			$this->redirect(array('tarefa/userHome'));
 		}	
 	}
 
-	public function actionTarefasPublicas() {	
-		//$this->layout = '//layouts/column1';
+	public function actionTarefasPublicas() {
+		$this->layout = '//layouts/column1';
 		$model = new Tarefas();
 		$model->unsetAttributes();
-
-		if (isset($_GET['Tarefas'])){
+		if (isset($_GET['Tarefas']))
 			$model->setAttributes($_GET['Tarefas']);
-		}
 		$this->render('tarefasPublicas', array(
-			// 'dataProvider' => $dataProvider,
 			'dataProvider' => $model,
 		));
 	}
@@ -164,29 +152,24 @@ class TarefaController extends GxController {
 		$this->layout = '//layouts/column1';
 		$model = new Tarefas();
 		$model->unsetAttributes();
-
 		if (isset($_GET['Tarefas']))
 			$model->setAttributes($_GET['Tarefas']);
 		$this->render('userTarefas', array(
-			// 'dataProvider' => $dataProvider,
 			'dataProvider' => $model,
 		));
 	}
 
 	public function actionUserHome() {
-
 		$this->layout = '//layouts/column1';
-
 		$model = new Tarefas('search');	
-
 		$model->unsetAttributes();
-
 		if (isset($_GET['Tarefas']))
 			$model->setAttributes($_GET['Tarefas']);
+
 		$this->render('userHome', array(
-			// 'dataProvider' => $dataProvider,
 			'dataProvider' => $model,
 		));		
 	}
+
 
 }

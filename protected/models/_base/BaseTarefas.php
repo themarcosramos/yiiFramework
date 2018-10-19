@@ -80,22 +80,7 @@ abstract class BaseTarefas extends GxActiveRecord {
 		);
 	}
 
-	public function attributeLabels() {
-		return array(
-			'idTarefa' => Yii::t('app', 'Tarefa'),
-			'titulo' => Yii::t('app', 'Título'),
-			'privacidade' => Yii::t('app', 'Privacidade'),
-			'descricao' => Yii::t('app', 'Descrição'),
-			'T_status' => Yii::t('app', 'Status'),
-			'conclusao' => Yii::t('app', 'Data da conclusão'),
-			'criacao' => Yii::t('app', 'Data da criação'),
-			'modificacao' => Yii::t('app', 'Data da modificação'),
-			'usuario' => null,
-			'tipo' => null,
-			'usuario0' => null,
-			'tipo0' => null,
-		);
-	}
+	
 
 	public function search() {
 		$criteria = new CDbCriteria;

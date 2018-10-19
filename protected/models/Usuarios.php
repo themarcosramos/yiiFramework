@@ -4,10 +4,37 @@ Yii::import('application.models._base.BaseUsuarios');
 
 class Usuarios extends BaseUsuarios
 {
+	protected $Password;
+	
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
 	}
 
+	public function beforeSave() {
+		
+		if($this->senha != $this->Password) {
+			$this->senha = MD5($this->senha);
+		}	
+		(!empty( $this->nascimento))?$this->nascimento=date('Y-m-d',strtotime($this->nascimento)):"" ;
+		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;
+		(!empty($this->criacao))?$this->criacao=date('Y-m-d',strtotime($this->criacao)):"" ;
+
+		return parent::beforeSave();
+	}
+
+	public static function getIdUser() {
+		
+		$criteria = new CDbCriteria;
+		$criteria->select = 'idUsuario';
+		$criteria->condition = 'Login=:login';
+		$criteria->params = array(':login' => Yii::app()->user->name);
+
+		$model = new Usuarios();
+		$usuario = $model->find($criteria);
+
+		return $usuario->idUsuario;
+	}
+	
 	public function attributeLabels() {
 		return array(
 			'idUsuario' => Yii::t('app', 'Usuário'),
@@ -22,14 +49,7 @@ class Usuarios extends BaseUsuarios
 			'modificacao' => Yii::t('app', 'Data da modificação'),
 			'tarefas' => null,
 		);
-	}
-	public function beforeSave(){
-		(!empty( $this->nascimento))?$this->nascimento=date('Y-m-d',strtotime($this->nascimento)):"" ;
-		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;
-		(!empty($this->criacao))?$this->criacao=date('Y-m-d',strtotime($this->criacao)):"" ;
-		return parent::beforeSave();
-	}
-	
+	}	
 	public function afterFind(){
 		(!empty( $this->nascimento))?$this->nascimento=date('d/m/Y',strtotime($this->nascimento)):"" ;
 		(!empty($this->modificacao))?$this->modificacao=date('d/m/Y',strtotime($this->modificacao)):"" ;

@@ -27,7 +27,7 @@ abstract class BaseTipos extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Tipo|Tipos', $n);
+		return Yii::t('app','Tipo de Tarefa|Tipos de Tarefa', $n);
 	}
 
 	public static function representingColumn() {

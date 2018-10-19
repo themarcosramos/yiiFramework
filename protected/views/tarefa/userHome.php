@@ -1,7 +1,6 @@
 <?php
 	echo "<h3 class=''>Bem Vindo ".Yii::app()->user->name."!</h3><br>";
-	echo "<h4> Essas são as suas Tarefas Pendentes:</h4>";
-
+	echo "<h4>Essas são as suas Tarefas Pendentes:</h4>";
 ?>
 <?php 
 
@@ -11,24 +10,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'filter' => $dataProvider,
 	'columns' => array(       
 		array(
-			'header' => 'ID',
-			'name' => 'idTarefa',
-		),
-		array(
 			'header' => 'Título',
-			'name' => 'Tttulo',
+			'name' => 'titulo',
 		),
 		array(
 			'header' => 'Privacidade',
 			'name' => 'privacidade',
-			'filter'=> array('Pública' => 'Publica','Privada' =>'Privada'),
+			'filter'=> array('Pública' => 'Publica', 'Privada' => 'Privada'),
 		),
 		array(
 			'header' => 'Descrição',
 			'name' => 'descricao',
 		),
 		array(
-            'header' => 'Tipo da Tarefa',
+            'header' => 'Tipo de Tarefa',
             'name'=>'tipo',
             'value'=>'GxHtml::valueEx($data->tipo0)',
             'filter'=>GxHtml::listDataEx(Tipos::model()->findAllAttributes(null, true)),
@@ -40,8 +35,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array(
 			'header' => 'Ações',
 			'class' => 'CButtonColumn',
-			'template' => '{view}{update}',            
+			'template' => '{view}{update}{create}',            
 		),
 	),
 )); 
+
 ?>

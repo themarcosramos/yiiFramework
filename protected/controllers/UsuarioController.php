@@ -10,16 +10,16 @@ class UsuarioController extends GxController {
 	public function accessRules() {
 		return array(
 			array('allow',
-                'actions' => array('create','update','delete','admin','index','view'),
-                'roles' => array('admin'),
+                'actions' => array('create','update','delete','admin','index','view',),
+				'roles' => array('admin'),
+				
 			),	
 			array('allow',
                 'actions' => array('update','view','perfil'),
-                'users' => array('@'),
 			),		
 			array('deny',
                 'actions' => array('create','update','delete','admin','index','view','perfil'),
-                'users' => array('?'),
+				'users' => array('?'),
             ), 
         );
     }
@@ -36,10 +36,9 @@ class UsuarioController extends GxController {
 		}		
 	}
 
-	public function actionCreate() {
+	public function actionCreate() {	
 		if(Yii::app()->user->name == 'admin') {
 			$model = new Usuarios;
-
 			if(isset($_POST['Usuarios'])) {
 				$model->setAttributes($_POST['Usuarios']);
 				if ($model->save()) {
@@ -51,21 +50,20 @@ class UsuarioController extends GxController {
 			}
 			$this->render('create', array( 'model' => $model));	
 		} else {
-			$this->redirect(array('tarefa/index'));
+			$this->redirect(array('tarefa/userHome'));
 		}		
 	}
 
 	public function actionUpdate($id) {
 		$model = $this->loadModel($id, 'Usuarios');
-
 		if (isset($_POST['Usuarios'])) {
 			$model->setAttributes($_POST['Usuarios']);
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->idUsuario));
 			}
 		}
-
 		if(Yii::app()->user->name == 'admin') {
+			
 			$this->render('update', array(
 				'model' => $model,
 			));
@@ -78,7 +76,6 @@ class UsuarioController extends GxController {
 
 	public function actionDelete($id) {
 		if(Yii::app()->user->name == 'admin') {
-
 			if (Yii::app()->getRequest()->getIsPostRequest()) {
 				$this->loadModel($id, 'Usuarios')->delete();
 				if (!Yii::app()->getRequest()->getIsAjaxRequest())
@@ -86,41 +83,37 @@ class UsuarioController extends GxController {
 			} else
 				throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));		
 		} else {
-			$this->redirect(array('tarefa/index'));
+			$this->redirect(array('tarefa/userHome'));
 		}	
 	}
 
 	public function actionIndex() {
-		if(Yii::app()->user->name == 'admin') {	
+		if(Yii::app()->user->name == 'admin') {
 			$dataProvider = new CActiveDataProvider('Usuarios');
 			$this->render('index', array(
 				'dataProvider' => $dataProvider,
 			));	
 		} else {
-			$this->redirect(array('tarefa/index'));
+			$this->redirect(array('tarefa/userHome'));
 		}		
 	}
-
 	public function actionAdmin() {			
 		if(Yii::app()->user->name == 'admin') {
 			$model = new Usuarios('search');
 			$model->unsetAttributes();
-
 			if (isset($_GET['Usuarios']))
 				$model->setAttributes($_GET['Usuarios']);
-
 			$this->render('admin', array(
 				'model' => $model,
 			));				
 		} else {
-			$this->redirect(array('tarefa/index'));
+			$this->redirect(array('tarefa/userHome'));
 		}
 	}
 
 	public function actionPerfil() {	
 		$model = $this->loadModel(Usuarios::getIdUser(), 'Usuarios');		
-
-		if (isset($_POST['Usuarios'])) {
+		if (isset($_POST['Usuarios'])) {	
 			$model->setAttributes($_POST['Usuarios']);
 			if ($model->save()) {	
 				$this->redirect(array('view', 'id' => $model->idUsuario));
