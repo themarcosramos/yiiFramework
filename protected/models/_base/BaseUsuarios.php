@@ -49,6 +49,7 @@ abstract class BaseUsuarios extends GxActiveRecord {
 			array('email, login', 'unique'),
 			array('telefone', 'length', 'max'=>30),
 			array('nascimento, criacao, modificacao', 'safe'),
+			['modificacao', 'compare', 'operator' => '>=', 'compareAttribute' => 'criacao'],
 			array('nascimento, criacao, modificacao', 'default', 'setOnEmpty' => true, 'value' => null),
 			array('idUsuario, nome, sexo, nascimento, email, login, telefone, senha, criacao, modificacao', 'safe', 'on'=>'search'),
 		);

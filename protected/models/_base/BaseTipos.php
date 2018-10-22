@@ -39,6 +39,7 @@ abstract class BaseTipos extends GxActiveRecord {
 			array('nome', 'required'),
 			array('nome', 'length', 'max'=>150),
 			array('criacao, modificacao', 'safe'),
+			['modificacao', 'compare', 'operator' => '>=', 'compareAttribute' => 'criacao'],
 			array('criacao, modificacao', 'default', 'setOnEmpty' => true, 'value' => null),
 			array('idTipo, nome, criacao, modificacao', 'safe', 'on'=>'search'),
 		);

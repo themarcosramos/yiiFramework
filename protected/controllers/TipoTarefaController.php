@@ -37,6 +37,7 @@ class TipoTarefaController extends GxController {
 
 	public function actionCreate() {
 		$model = new Tipos;	
+			
 			if (isset($_POST['Tipos'])) {			
 				$model->setAttributes($_POST['Tipos']);									
 				if ($model->save()) {
@@ -67,7 +68,6 @@ class TipoTarefaController extends GxController {
 	}
 
 	public function actionDelete($id) {	
-
 		$model=Tarefas::model()->deleteAll(array("condition"=>"tipo='$id'"));;
 		$this->loadModel($id, 'Tipos')->delete();
 

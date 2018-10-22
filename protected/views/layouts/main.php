@@ -55,15 +55,12 @@
 			array('label'=>'Tarefas de '.ucfirst(Yii::app()->user->name), 'url'=>array('/tarefa/userTarefas'), 'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Tarefas Públicas','url'=>array('/tarefa/tarefasPublicas'), 'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Cadastar uma Tarefa'.ucfirst(Yii::app()->user->name), 'url'=>array('/tarefa/create'),'visible'=>!Yii::app()->user->isGuest),
-			array('label'=>'Criar um tipo  de tarefa','url'=>array('/TipoTarefa/create'),'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 			array('label'=>'Sair  '. ucfirst(Yii::app()->user->name).'?', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 		),
 	)); 	
 	echo '</div><!-- mainmenu -->';
-
 }
-
 ?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>

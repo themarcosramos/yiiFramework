@@ -25,13 +25,11 @@
 	<?php /*
 	<?php echo GxHtml::encode($data->getAttributeLabel('senha')); ?>:
 	<?php echo GxHtml::encode($data->senha); ?>
-	<br />
+	<br />*/ ?>
 	<?php echo GxHtml::encode($data->getAttributeLabel('criacao')); ?>:
 	<?php echo GxHtml::encode($data->criacao); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('modificacao')); ?>:
 	<?php echo GxHtml::encode($data->modificacao); ?>
 	<br />
-	*/ ?>
-
 </div>
