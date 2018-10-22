@@ -4,10 +4,6 @@
 	'data' => $model,
 	'attributes' => array(
                 array(
-                        'label' => 'ID',
-                        'name' => 'idUsuario',            
-                ),
-                array(
                         'label' => 'Nome',
                         'name' => 'nome',            
                 ),

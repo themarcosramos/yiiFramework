@@ -4,10 +4,6 @@
 	'data' => $model,
 	'attributes' => array(
         array(
-            'label' => 'ID',
-            'name' => 'idTarefa',            
-        ),
-        array(
             'label' => 'Título',
             'name' => 'titulo',            
         ),

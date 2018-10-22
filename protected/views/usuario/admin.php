@@ -42,14 +42,14 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 	'dataProvider' => $model->search(),
 	'filter' => $model,
 	'columns' => array(
-		'idUsuario',
+//		'idUsuario',
 		'nome',
 		'sexo',
 		'nascimento',
 		'email',
 		'login',
 		'telefone',
-		'senha',
+//		'senha',
 		'criacao',
 		'modificacao',
 		

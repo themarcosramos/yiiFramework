@@ -7,10 +7,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'filter' => $dataProvider,
 	'columns' => array(
         array(
-            'header' => 'ID',
-            'name' => 'idTarefa',
-        ),
-        array(
             'header' => 'Título',
             'name' => 'titulo',
         ),
