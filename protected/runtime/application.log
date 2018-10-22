@@ -6440,3 +6440,205 @@ Stack trace:
 REQUEST_URI=/yiiFramework/index.php?r=tipotarefa/create
 HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/userHome
 ---
+2018/10/22 08:09:13 [error] [exception.CException] exception 'CException' with message 'A propriedade "Tarefas.Usuario" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(160): CComponent->__set('Usuario', NULL)
+#1 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(93): CActiveRecord->__set('Usuario', NULL)
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(68): TarefaController->verificaUpdate(Object(Tarefas))
+#3 [internal function]: TarefaController->actionUpdate('2')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TarefaController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TarefaController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('update')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/update')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/update&id=2
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/update&id=2
+---
+2018/10/22 08:21:33 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_2` FOREIGN KEY (`tipo`) REFERENCES `Tipos` (`idTipo`)). A declaração SQL executada foi: DELETE FROM `Tipos` WHERE `Tipos`.`idTipo`=7.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (73)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/22 08:21:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_2` FOREIGN KEY (`tipo`) REFERENCES `Tipos` (`idTipo`)). The SQL statement executed was: DELETE FROM `Tipos` WHERE `Tipos`.`idTipo`=7' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('7')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(73): CActiveRecord->delete()
+#3 [internal function]: TipoTarefaController->actionDelete('7')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/dele...')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa%2Fdelete&id=7&ajax=tipos-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
+---
+2018/10/22 08:24:41 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_2` FOREIGN KEY (`tipo`) REFERENCES `Tipos` (`idTipo`)). A declaração SQL executada foi: DELETE FROM `Tipos` WHERE `Tipos`.`idTipo`=7.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (73)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/22 08:24:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_2` FOREIGN KEY (`tipo`) REFERENCES `Tipos` (`idTipo`)). The SQL statement executed was: DELETE FROM `Tipos` WHERE `Tipos`.`idTipo`=7' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('7')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(73): CActiveRecord->delete()
+#3 [internal function]: TipoTarefaController->actionDelete('7')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/dele...')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa%2Fdelete&id=7&ajax=tipos-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
+---
+2018/10/22 08:34:41 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_2` FOREIGN KEY (`tipo`) REFERENCES `Tipos` (`idTipo`)). A declaração SQL executada foi: DELETE FROM `Tipos` WHERE `Tipos`.`idTipo`=7.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (73)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/22 08:34:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_2` FOREIGN KEY (`tipo`) REFERENCES `Tipos` (`idTipo`)). The SQL statement executed was: DELETE FROM `Tipos` WHERE `Tipos`.`idTipo`=7' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('7')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(73): CActiveRecord->delete()
+#3 [internal function]: TipoTarefaController->actionDelete('7')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/dele...')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa%2Fdelete&id=7&ajax=tipos-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
+---
+2018/10/22 08:38:21 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idTipos' in 'where clause'. A declaração SQL executada foi: DELETE FROM `Tarefas` WHERE idTipos='7'.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (71)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/22 08:38:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idTipos' in 'where clause'. The SQL statement executed was: DELETE FROM `Tarefas` WHERE idTipos='7'' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1755): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(71): CActiveRecord->deleteAll(Array)
+#2 [internal function]: TipoTarefaController->actionDelete('7')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/dele...')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa%2Fdelete&id=7&ajax=tipos-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
+---
+2018/10/22 08:39:09 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idTipo' in 'where clause'. A declaração SQL executada foi: DELETE FROM `Tarefas` WHERE idTipo='7'.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (71)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/22 08:39:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idTipo' in 'where clause'. The SQL statement executed was: DELETE FROM `Tarefas` WHERE idTipo='7'' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1755): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(71): CActiveRecord->deleteAll(Array)
+#2 [internal function]: TipoTarefaController->actionDelete('7')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/dele...')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa%2Fdelete&id=7&ajax=tipos-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
+---
+2018/10/22 08:39:59 [error] [php] Trying to get property of non-object (/home/marcos/opensev/www/yiiFramework/protected/models/Usuarios.php:35)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): TarefaController->renderInternal()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TarefaController->renderFile()
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): TarefaController->renderPartial()
+#3 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(166): TarefaController->render()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionUserHome()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): TarefaController->runAction()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): TarefaController->filterAccessControl()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): TarefaController->runActionWithFilters()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): TarefaController->run()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/marcos/opensev/www/yiiFramework/index.php(17): CWebApplication->run()
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/userHome
+in /home/marcos/opensev/www/yiiFramework/protected/models/Usuarios.php (35)
+in /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/userHome.php (9)
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php (166)
+2018/10/22 08:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(72): GxController->loadModel('7', 'Tipos')
+#1 [internal function]: TipoTarefaController->actionDelete('7')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/dele...')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa%2Fdelete&id=7&ajax=tipos-grid
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
+---

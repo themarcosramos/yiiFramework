@@ -13,7 +13,7 @@ class Usuarios extends BaseUsuarios
 	public function beforeSave() {
 		
 		if($this->senha != $this->Password) {
-			$this->senha = MD5($this->senha);
+			//$this->senha = MD5($this->senha);
 		}	
 		(!empty( $this->nascimento))?$this->nascimento=date('Y-m-d',strtotime($this->nascimento)):"" ;
 		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;

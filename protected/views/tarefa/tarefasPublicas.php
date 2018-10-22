@@ -10,17 +10,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ],
 	'columns' => array(
         array(
-            'header' => 'ID',
-            'name' => 'idTarefa',
-        ),
-        array(
             'header' => 'Título',
             'name' => 'titulo',
-        ),
-        array(
-            'header' => 'Privacidade',
-            'name' => 'privacidade',
-            'filter'=> array('Pública' => 'Publica', 'Privada' => 'Privada'),
         ),
         array(
             'header' => 'Descrição',

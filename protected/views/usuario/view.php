@@ -19,14 +19,14 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data' => $model,
 	'attributes' => array(
-'idUsuario',
+//'idUsuario',
 'nome',
 'sexo',
 'nascimento',
 'email',
 'login',
 'telefone',
-'senha',
+//'senha',
 'criacao',
 'modificacao',
 	),

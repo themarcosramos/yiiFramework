@@ -36,9 +36,7 @@ class TipoTarefaController extends GxController {
 	}
 
 	public function actionCreate() {
-		$model = new Tipos;
-		if(Yii::app()->user->name == 'admin') {		
-			
+		$model = new Tipos;	
 			if (isset($_POST['Tipos'])) {			
 				$model->setAttributes($_POST['Tipos']);									
 				if ($model->save()) {
@@ -49,19 +47,6 @@ class TipoTarefaController extends GxController {
 				}
 			}
 			$this->render('create', array( 'model' => $model));	
-		} else {;
-			if (isset($_POST['Tipos'])) {
-				
-				$model->setAttributes($_POST['Tipos']);									
-				if ($model->save()) {
-					if (Yii::app()->getRequest()->getIsAjaxRequest())
-						Yii::app()->end();
-					else
-						$this->redirect(array('view', 'id' => $model->idTipo));
-				}
-			}
-			$this->render('create', array( 'model' => $model));	
-		}	
 	}
 
 	public function actionUpdate($id) {			
@@ -82,17 +67,20 @@ class TipoTarefaController extends GxController {
 	}
 
 	public function actionDelete($id) {	
-		if(Yii::app()->user->name == 'admin') {
-	
+
+		$model=Tarefas::model()->deleteAll(array("condition"=>"tipo='$id'"));;
+		$this->loadModel($id, 'Tipos')->delete();
+
+        /**if(Yii::app()->user->name == 'admin') {
 			if (Yii::app()->getRequest()->getIsPostRequest()) {
 				$this->loadModel($id, 'Tipos')->delete();
 				if (!Yii::app()->getRequest()->getIsAjaxRequest())
 					$this->redirect(array('admin'));
 			} else
-				throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));
-		} else {	
-			$this->redirect(array('tarefa/userHome'));
-		}	
+			*/		
+		//} else {
+			$this->redirect(array('tarefa/create'));
+	//	}	
 	}
 
 	public function actionIndex() {

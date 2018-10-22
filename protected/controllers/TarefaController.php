@@ -40,7 +40,6 @@ class TarefaController extends GxController {
 
 	public function actionCreate() {
 		$model = new Tarefas;	
-		//if(Yii::app()->user->name == 'admin') {
 			if (isset($_POST['Tarefas'])) {
 				$model->setAttributes($_POST['Tarefas']);
 				if($model->privacidade == 'Publica') {
@@ -54,10 +53,6 @@ class TarefaController extends GxController {
 				}
 			}
 			$this->render('create', array( 'model' => $model));
-		//} else {
-			//$this->redirect(array('tarefa/userHome'));
-			$this->render('create', array( 'model' => $model));
-	//	}
 	}
 
 	public function actionUpdate($id) {	
@@ -85,12 +80,12 @@ class TarefaController extends GxController {
 	private function verificaUpdate($model) {
 
 		if($model->T_status == "Concluida") {
-			$model->conclusao = date("Y-m-d ");
+			$model->conclusao = date("Y-m-d");
 		} else {
 			$model->conclusao = null;
 		}
 		if($model->privacidade == 'Publica') {
-			$model->Usuario = null;
+			$model->usuario = null;
 		} 
 
 		return $model;
