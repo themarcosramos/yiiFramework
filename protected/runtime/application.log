@@ -6642,3 +6642,232 @@ Stack trace:
 REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa%2Fdelete&id=7&ajax=tipos-grid
 HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
 ---
+2018/10/22 12:26:30 [error] [exception.CException] exception 'CException' with message 'A propriedade "CWebUser.usuario" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/auth/CWebUser.php(141): CComponent->__get('usuario')
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php(25): CWebUser->__get('usuario')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php(19): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(55): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/index
+---
+2018/10/22 12:27:42 [error] [php] Illegal string offset 'name' (/home/marcos/opensev/www/yii-1.1.1.12/framework/web/helpers/CHtml.php:2089)
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php(25): CActiveForm->dropDownList()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): TarefaController->renderInternal()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TarefaController->renderFile()
+#4 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php(19): TarefaController->renderPartial()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): TarefaController->renderInternal()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TarefaController->renderFile()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): TarefaController->renderPartial()
+#9 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(55): TarefaController->render()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionCreate()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): TarefaController->runAction()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): TarefaController->filterAccessControl()
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): TarefaController->runActionWithFilters()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): TarefaController->run()
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /home/marcos/opensev/www/yiiFramework/index.php(17): CWebApplication->run()
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
+in /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php (25)
+in /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php (19)
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php (55)
+2018/10/22 12:28:36 [error] [exception.CException] exception 'CException' with message 'A propriedade "CWebUser.title" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/auth/CWebUser.php(141): CComponent->__get('title')
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php(25): CWebUser->__get('title')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php(19): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(55): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/index
+---
+2018/10/22 12:29:04 [error] [exception.CException] exception 'CException' with message 'A propriedade "CWebUser.idUsuario" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/auth/CWebUser.php(141): CComponent->__get('idUsuario')
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php(25): CWebUser->__get('idUsuario')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php(19): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(55): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/index
+---
+2018/10/22 12:29:16 [error] [exception.CException] exception 'CException' with message 'A propriedade "CWebUser.idUsuario" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/auth/CWebUser.php(141): CComponent->__get('idUsuario')
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php(25): CWebUser->__get('idUsuario')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php(19): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(55): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/index
+---
+2018/10/22 12:29:44 [error] [exception.CException] exception 'CException' with message 'A propriedade "CWebUser.title" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/auth/CWebUser.php(141): CComponent->__get('title')
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php(25): CWebUser->__get('title')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php(19): CController->renderPartial('_form', Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php(55): CController->render('create', Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TarefaController->actionCreate()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tarefa/create')
+#22 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tarefa/index
+---
+2018/10/22 12:37:21 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'nascimento' at row 1. A declaração SQL executada foi: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/22 12:37:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'nascimento' at row 1. The SQL statement executed was: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(44): CActiveRecord->save()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/create
+---
+2018/10/22 12:37:43 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'nascimento' at row 1. A declaração SQL executada foi: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (44)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/22 12:37:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'nascimento' at row 1. The SQL statement executed was: INSERT INTO `Usuarios` (`nome`, `sexo`, `nascimento`, `email`, `login`, `senha`, `telefone`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(44): CActiveRecord->save()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): UsuarioController->actionCreate()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/create')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/create
+---

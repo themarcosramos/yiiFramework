@@ -71,16 +71,16 @@ class TipoTarefaController extends GxController {
 		$model=Tarefas::model()->deleteAll(array("condition"=>"tipo='$id'"));;
 		$this->loadModel($id, 'Tipos')->delete();
 
-        /**if(Yii::app()->user->name == 'admin') {
+       /* if(Yii::app()->user->name == 'admin') {
 			if (Yii::app()->getRequest()->getIsPostRequest()) {
 				$this->loadModel($id, 'Tipos')->delete();
 				if (!Yii::app()->getRequest()->getIsAjaxRequest())
 					$this->redirect(array('admin'));
-			} else
-			*/		
-		//} else {
+			} else{
+			throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));	
+		} else {*/
 			$this->redirect(array('tarefa/create'));
-	//	}	
+		//}	
 	}
 
 	public function actionIndex() {

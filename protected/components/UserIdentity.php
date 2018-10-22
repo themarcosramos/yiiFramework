@@ -51,5 +51,8 @@ class UserIdentity extends CUserIdentity
 	}
 	return $this->idUsuario;
 	}
+	//public function getId(){
+	//	return $this->idUsuario;
+	//}
 
 }

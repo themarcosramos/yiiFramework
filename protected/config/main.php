@@ -9,7 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sistema de gerenciamento de tarefas',
 	'language'=>'pt_br',
-	//'sourceLanguage'=>'pt_br',
+	'sourceLanguage'=>'pt_br',
 
 	// preloading 'log' component
 	'preload'=>array('log'),

@@ -46,20 +46,19 @@ abstract class BaseTarefas extends GxActiveRecord {
 			array('titulo, privacidade, T_status', 'required'),
 			array('usuario, tipo', 'numerical', 'integerOnly'=>true),
 			array('titulo', 'length', 'max'=>150),
+			array('titulo', 'unique'),
 			array('privacidade', 'length', 'max'=>9),
 			array('descricao', 'length', 'max'=>250),
 			array('T_status', 'length', 'max'=>10),
 			array('conclusao, criacao, modificacao', 'safe'),
-			['conclusao', 'compare', 'operator' => '>=', 'compareAttribute' => 'criacao'],
-			['modificacao', 'compare', 'operator' => '>=', 'compareAttribute' => 'criacao'],
 			array('descricao, conclusao, criacao, modificacao, usuario, tipo', 'default', 'setOnEmpty' => true, 'value' => null),
 			array('idTarefa, titulo, privacidade, descricao, T_status, conclusao, criacao, modificacao, usuario, tipo', 'safe', 'on'=>'search'),
 		);
 	}
 	public function beforeSave(){
 		(!empty($this->conclusao))?$this->conclusao=date('Y-m-d',strtotime($this->conclusao)):"" ;
-		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;
-		(!empty($this->criacao))?$this->criacao=date('Y-m-d',strtotime($this->criacao)):"" ;
+		$this->modificacao =date('Y-m-d H:i:s');
+		$this->criacao =date('Y-m-d H:i:s');
 		return parent::beforeSave();
 	}
 	

@@ -11,11 +11,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'name' => 'titulo',
         ),
         array(
-            'header' => 'Privacidade',
-            'name' => 'privacidade',
-            'filter'=> array('Pública' => 'Publica', 'Privada' => 'Privada'),
-        ),
-        array(
             'header' => 'Descrição',
             'name' => 'descricao',
         ),

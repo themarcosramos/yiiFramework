@@ -12,11 +12,9 @@ class Usuarios extends BaseUsuarios
 
 	public function beforeSave() {
 		
-		if($this->senha != $this->Password) {
-		}	
-		(!empty( $this->nascimento))?$this->nascimento=date('Y-m-d',strtotime($this->nascimento)):"" ;
-		(!empty($this->modificacao))?$this->modificacao=date('Y-m-d',strtotime($this->modificacao)):"" ;
-		(!empty($this->criacao))?$this->criacao=date('Y-m-d',strtotime($this->criacao)):"" ;
+			(!empty( $this->nascimento))?$this->nascimento=date('Y-m-d',strtotime($this->nascimento)):"" ;
+			$this->modificacao =date('Y-m-d H:i:s');
+			$this->criacao =date('Y-m-d H:i:s');
 
 		return parent::beforeSave();
 	}

@@ -26,6 +26,7 @@
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
 			'attribute' => 'nascimento',
+			'language'=>'pt-BR',
 			'value' => $model->nascimento,
 			'options' => array(
 				'showButtonPanel' => true,
@@ -80,51 +81,11 @@
 		<?php echo $form->error($model,'telefone'); ?>
 		</div><!-- row -->
 		<div class="row">
-		<?php echo $form->labelEx($model,'criacao'); ?>
-		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-			'model' => $model,
-			'attribute' => 'criacao',
-			'value' => $model->criacao,
-			'options' => array(
-				'showButtonPanel' => true,
-				'changeYear' => true,
-				'dateFormat' => 'dd/mm/yy',
-				),
-			'htmlOptions'=>array(
-				'maxlength' => '10', 
-				'title' => 'dd/mm/aaaa',
-				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
-				),
-			));
-          ; ?>
-		<?php echo $form->error($model,'criacao'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'modificacao'); ?>
-		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-			'model' => $model,
-			'attribute' => 'modificacao',
-			'value' => $model->modificacao,
-			'options' => array(
-				'showButtonPanel' => true,
-				'changeYear' => true,
-				'dateFormat' => 'dd/mm/yy',
-				),
-			'htmlOptions'=>array(
-				'maxlength' => '10', 
-				'title' => 'dd/mm/aaaa',
-				'pattern' => '\d{1,2}/\d{1,2}/\d{4}',
-				),
-			));
-         ; ?>
-		<?php echo $form->error($model,'modificacao'); ?>
-		</div><!-- row -->
-
 		<label><?php //echo GxHtml::encode($model->getRelationLabel('tarefas')); ?></label>
 		<?php //echo $form->checkBoxList($model, 'tarefases', GxHtml::encodeEx(GxHtml::listDataEx(Tarefas::model()->findAllAttributes(null, true)), false, true)); ?>
 
 <?php
-echo GxHtml::submitButton(Yii::t('app', 'Save'));
+echo GxHtml::submitButton(Yii::t('app', 'salvar'));
 $this->endWidget();
 ?>
 </div><!-- form -->
