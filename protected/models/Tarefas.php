@@ -80,4 +80,5 @@ class Tarefas extends BaseTarefas
 			'criteria' => $criteria,
 		));
 	}
+	
 }

@@ -6871,3 +6871,369 @@ Stack trace:
 REQUEST_URI=/yiiFramework/index.php?r=usuario/create
 HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/create
 ---
+2018/10/23 08:12:56 [error] [php] Undefined variable: model (/home/marcos/opensev/www/yiiFramework/protected/views/tipoTarefa/index.php:11)
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): TipoTarefaController->renderFile()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): TipoTarefaController->renderPartial()
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(92): TipoTarefaController->render()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TipoTarefaController->actionIndex()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): TipoTarefaController->runAction()
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): TipoTarefaController->filterAccessControl()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): TipoTarefaController->runActionWithFilters()
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): TipoTarefaController->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CWebApplication->run()
+REQUEST_URI=/yiiFramework/index.php?r=TipoTarefa/index
+in /home/marcos/opensev/www/yiiFramework/protected/views/tipoTarefa/index.php (11)
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (92)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/23 08:17:24 [error] [exception.CException] exception 'CException' with message 'A propriedade "Tipos.id" não está definida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(144): CComponent->__get('id')
+#1 /home/marcos/opensev/www/yiiFramework/protected/views/tipoTarefa/view.php(15): CActiveRecord->__get('id')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#6 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(32): CController->render('view', Array)
+#7 [internal function]: TipoTarefaController->actionView('5')
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view&id=5
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/create
+---
+2018/10/23 08:17:57 [error] [exception.CDbException] exception 'CDbException' with message 'A tabela "Tarefas" não possui uma coluna chamada "idTipo".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/schema/CDbCommandBuilder.php:570
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1563): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /home/marcos/opensev/www/yiiFramework/protected/models/Tipos.php(14): CActiveRecord->countByAttributes(Array)
+#2 /home/marcos/opensev/www/yiiFramework/protected/views/tipoTarefa/view.php(15): Tipos->removeTipoTarefa('5')
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(127): require('/home/marcos/op...')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/marcos/op...', Array, true)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(870): CBaseController->renderFile('/home/marcos/op...', Array, true)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#7 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(32): CController->render('view', Array)
+#8 [internal function]: TipoTarefaController->actionView('5')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#18 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#20 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#21 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view&id=5
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/create
+---
+2018/10/23 08:21:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('TipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=TipoTarefa/view
+---
+2018/10/23 08:21:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(31): GxController->loadModel('8', 'Tipos')
+#1 [internal function]: TipoTarefaController->actionView('8')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view&id=8
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/admin
+---
+2018/10/23 08:30:36 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'teste' for key 'nome'. A declaração SQL executada foi: INSERT INTO `Tipos` (`nome`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2).
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php (43)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/23 08:30:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'teste' for key 'nome'. The SQL statement executed was: INSERT INTO `Tipos` (`nome`, `criacao`, `modificacao`) VALUES (:yp0, :yp1, :yp2)' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(43): CActiveRecord->save()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(50): TipoTarefaController->actionCreate()
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/crea...')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/create
+---
+2018/10/23 08:34:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "tipoTarefas/create".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefas/cre...')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefas/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/view&id=15
+---
+2018/10/23 08:35:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(31): GxController->loadModel('15', 'Tipos')
+#1 [internal function]: TipoTarefaController->actionView('15')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view&id=15
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/create
+---
+2018/10/23 08:35:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "tipoTarefas/create".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefas/cre...')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefas/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/view&id=15
+---
+2018/10/23 08:35:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "tipotarefa/create".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipotarefa/crea...')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipotarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/view&id=16
+---
+2018/10/23 08:35:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/TipoTarefaController.php(31): GxController->loadModel('16', 'Tipos')
+#1 [internal function]: TipoTarefaController->actionView('16')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TipoTarefaController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TipoTarefaController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view&id=16
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/create
+---
+2018/10/23 08:36:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "tipotarefa/create".' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipotarefa/crea...')
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipotarefa/create
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=tipoTarefa/view&id=17
+---
+2018/10/23 08:45:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---
+2018/10/23 08:45:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---
+2018/10/23 08:46:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---
+2018/10/23 08:47:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---
+2018/10/23 08:48:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---
+2018/10/23 08:48:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---
+2018/10/23 08:48:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('TipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=TipoTarefa/view
+---
+2018/10/23 08:48:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php:337
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('tipoTarefa/view')
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiFramework/index.php?r=tipoTarefa/view
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=TipoTarefa/index
+---

@@ -15,7 +15,7 @@ class TipoTarefaController extends GxController {
                 'roles' => array('admin'),
 			),	
 			array('allow',
-                'actions' => array('update','view','perfil'),
+                'actions' => array('update','view','perfil','view'),
                 'users' => array('@'),
 			),		
 			array('deny',
@@ -79,7 +79,7 @@ class TipoTarefaController extends GxController {
 			} else{
 			throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));	
 		} else {*/
-			$this->redirect(array('tarefa/create'));
+			$this->redirect(array('tipoTarefa/create'));
 		//}	
 	}
 

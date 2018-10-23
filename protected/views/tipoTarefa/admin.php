@@ -48,6 +48,9 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 		'modificacao',
 		array(
 			'class' => 'CButtonColumn',
+			'header' => 'Ações',
+            'class' => 'CButtonColumn',
+            'template' => '{view}{update}',  
 		),
 	),
 )); ?>
