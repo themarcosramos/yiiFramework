@@ -54,13 +54,13 @@ body
 	background:white url(bg.gif) repeat-x left top;
 	text-align: right;
 	font-size: 25px;
-	padding-bottom: 25px;
+	padding-bottom: 20px;
 	
 }
 
 #mainmenu ul
 {
-	padding:6px 20px 5px 20px;
+	padding:4px 12px 4px 12px;
 	margin:0px;
 }
 
@@ -73,11 +73,13 @@ body
 {
 	color:#ffffff;
 	background-color:transparent;
-	font-size:14px;
+	font-size:15px;
 	font-weight:bold;
 	text-decoration:none;
-	padding:8px 10px;
+	/*padding:5px 10px;*/
+	padding: 4px;
 	font-family: sans-serif;
+	margin:2px;
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a

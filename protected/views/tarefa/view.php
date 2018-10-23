@@ -9,8 +9,9 @@ $this->menu=array(
 	array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
 	array('label'=>Yii::t('app', 'Cadastrar') . ' ' . $model->label(), 'url'=>array('create')),
 	array('label'=>Yii::t('app', 'Atualizar') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->idTarefa)),
-	array('label'=>Yii::t('app', 'Deletar') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idTarefa), 'confirm'=>'Are you sure you want to delete this item?')),
+     array('label'=>Yii::t('app', 'Deletar') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->idTarefa), 'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>Yii::t('app', 'Adminstar') . ' ' . $model->label(2), 'url'=>array('admin')),
+
 );
 ?>
 

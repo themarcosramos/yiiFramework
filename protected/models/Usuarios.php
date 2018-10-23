@@ -59,4 +59,14 @@ class Usuarios extends BaseUsuarios
 		return $res;
 
 	}
+	public function removeUsuario($id){
+        $usuario = Usuarios::model()->findByPk($id);
+        $qtd = Tarefas::model()->countByAttributes(array('usuario'=> $id));
+        if($qtd==0)
+            return "Deseja deletar a tarefa $usuario->nome.";
+        else if($qtd==1)
+            return "Deseja deletar a tarefa $usuario->nome, a mesma está selecionada em $qtd tarefa que também será apagada.";
+        else
+            return "Deseja deletar a tarefa $usuario->nome, a mesma está selecionada em $qtd tarefas que também serão apagadas.";  
+    }
 }

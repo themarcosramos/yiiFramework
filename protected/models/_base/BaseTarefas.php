@@ -43,7 +43,7 @@ abstract class BaseTarefas extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('titulo, privacidade, T_status', 'required'),
+			array('titulo, privacidade, T_status,usuario, tipo', 'required'),
 			array('usuario, tipo', 'numerical', 'integerOnly'=>true),
 			array('titulo', 'length', 'max'=>150),
 			array('titulo', 'unique'),

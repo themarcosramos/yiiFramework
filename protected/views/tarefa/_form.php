@@ -18,23 +18,23 @@ $model->usuario=Yii::app()->user->id;
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'privacidade'); ?>
-		<?php echo $form->dropDownlist($model, 'privacidade', array('Publica'=>'Pública','Privada' => 'Privada')); ?>
+		<?php echo $form->dropDownlist($model, 'privacidade', array('Publica'=>'Pública','Privada' => 'Privada'),array('empty'=>'Pública ou Privada?',));  ?>
 		<?php echo $form->error($model,'privacidade'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'usuario'); ?>
-		<?php echo $form->dropDownList($model, 'usuario', GxHtml::listDataEx(Usuarios::model()->findAllAttributes(null, true )) ); ?>
+		<?php echo $form->dropDownList($model, 'usuario', GxHtml::listDataEx(Usuarios::model()->findAllAttributes(null, true )), array('empty'=>'Qual seu usuário?',)); ?>
 		<?php echo $form->error($model,'usuario'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'tipo'); ?>
-		<?php echo $form->dropDownList($model, 'tipo', GxHtml::listDataEx(Tipos::model()->findAllAttributes(null, true))); ?>
+		<?php echo $form->dropDownList($model, 'tipo', GxHtml::listDataEx(Tipos::model()->findAllAttributes(null, true)),array('empty'=>'Qual o tipo da tarefa?',)); ?>
 		<?php echo $form->error($model,'tipo'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<div class="row">
 		<?php echo $form->labelEx($model,'T_status'); ?>
-		<?php echo $form->dropDownlist($model,'T_status',array('Concluida'=>'Concluída','Pendente' => 'Pendente'));?>
+		<?php echo $form->dropDownlist($model,'T_status',array('Concluida'=>'Concluída','Pendente' => 'Pendente'),array('empty'=>'Qual o status  da tarefa?',));?>
 		<?php echo $form->error($model,'T_status'); ?>
 		</div><!-- row -->
 		<?php echo $form->labelEx($model,'descricao'); ?>
