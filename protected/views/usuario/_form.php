@@ -18,7 +18,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'sexo'); ?>
-		<?php echo $form->dropDownlist($model, 'sexo', array('Masculino' => 'Masculino', 'Feminino' => 'Feminino','Outros'=>'Outros')); ?>
+		<?php echo $form->dropDownlist($model, 'sexo', array('Masculino' => 'Masculino', 'Feminino' => 'Feminino','Outros'=>'Outros'), array('empty'=>' ',)); ?>
 		<?php echo $form->error($model,'sexo'); ?>
 		</div><!-- row -->
 		<div class="row">

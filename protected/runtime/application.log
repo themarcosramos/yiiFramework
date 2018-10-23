@@ -7317,3 +7317,216 @@ REQUEST_URI=/yiiFramework/index.php?r=tarefa/create
 in /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/_form.php (26)
 in /home/marcos/opensev/www/yiiFramework/protected/views/tarefa/create.php (19)
 in /home/marcos/opensev/www/yiiFramework/protected/controllers/TarefaController.php (55)
+2018/10/23 11:01:36 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). A declaração SQL executada foi: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=23.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (80)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/23 11:01:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). The SQL statement executed was: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=23' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('23')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(80): CActiveRecord->delete()
+#3 [internal function]: UsuarioController->actionDelete('23')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/delete&id=23
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=23
+---
+2018/10/23 11:02:04 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). A declaração SQL executada foi: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=23.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (80)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/23 11:02:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). The SQL statement executed was: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=23' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('23')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(80): CActiveRecord->delete()
+#3 [internal function]: UsuarioController->actionDelete('23')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/delete&id=23
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=23
+---
+2018/10/23 11:02:15 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). A declaração SQL executada foi: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=23.
+in /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php (80)
+in /home/marcos/opensev/www/yiiFramework/index.php (17)
+2018/10/23 11:02:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`meuBanco`.`Tarefas`, CONSTRAINT `Tarefas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `Usuarios` (`idUsuario`)). The SQL statement executed was: DELETE FROM `Usuarios` WHERE `Usuarios`.`idUsuario`=23' in /home/marcos/opensev/www/yii-1.1.1.12/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/marcos/opensev/www/yii-1.1.1.12/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('23')
+#2 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(80): CActiveRecord->delete()
+#3 [internal function]: UsuarioController->actionDelete('23')
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#15 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#16 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/delete&id=23
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=23
+---
+2018/10/23 11:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(83): GxController->loadModel('23', 'Usuarios')
+#1 [internal function]: UsuarioController->actionDelete('23')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/delete&id=23
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=23
+---
+2018/10/23 11:09:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(30): GxController->loadModel('23', 'Usuarios')
+#1 [internal function]: UsuarioController->actionView('23')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/view&id=23
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/admin
+---
+2018/10/23 11:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(83): GxController->loadModel('24', 'Usuarios')
+#1 [internal function]: UsuarioController->actionDelete('24')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/delete&id=24
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=24
+---
+2018/10/23 11:10:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(30): GxController->loadModel('24', 'Usuarios')
+#1 [internal function]: UsuarioController->actionView('24')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/view&id=24
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/admin
+---
+2018/10/23 11:17:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(88): GxController->loadModel('27', 'Usuarios')
+#1 [internal function]: UsuarioController->actionDelete('27')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('delete')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/delete')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/delete&id=27
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/view&id=27
+---
+2018/10/23 11:18:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/marcos/opensev/www/yiiFramework/protected/extensions/giix-components/GxController.php:144
+Stack trace:
+#0 /home/marcos/opensev/www/yiiFramework/protected/controllers/UsuarioController.php(30): GxController->loadModel('27', 'Usuarios')
+#1 [internal function]: UsuarioController->actionView('27')
+#2 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#3 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#4 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /home/marcos/opensev/www/yii-1.1.1.12/framework/web/CWebApplication.php(142): CWebApplication->runController('usuario/view')
+#14 /home/marcos/opensev/www/yii-1.1.1.12/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/marcos/opensev/www/yiiFramework/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiFramework/index.php?r=usuario/view&id=27
+HTTP_REFERER=http://localhost/yiiFramework/index.php?r=usuario/admin
+---

@@ -53,11 +53,11 @@
 			array('label'=>'Home', 'url'=>array('/tarefa/userHome'), 'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>ucfirst(Yii::app()->user->name), 'url'=>array('/usuario/perfil'), 'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Tarefas de '.ucfirst(Yii::app()->user->name), 'url'=>array('/tarefa/userTarefas'), 'visible'=>!Yii::app()->user->isGuest),
-			array('label'=>'Tarefas Públicas ','url'=>array('/tarefa/tarefasPublicas'), 'visible'=>!Yii::app()->user->isGuest),
-			array('label'=>'Criar uma Tarefa Sr(a):  '.ucfirst(Yii::app()->user->name).'?' ,'url'=>array('/tarefa/create'),'visible'=>!Yii::app()->user->isGuest),
-			array('label'=>'Criar um tipo Sr(a):  '.ucfirst(Yii::app()->user->name).'?' ,'url'=>array('/tipoTarefa/create'),'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Tarefas públicas ','url'=>array('/tarefa/tarefasPublicas'), 'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Criar uma tarefa' ,'url'=>array('/tarefa/create'),'visible'=>!Yii::app()->user->isGuest),
+			array('label'=>'Criar um tipo' ,'url'=>array('/tipoTarefa/create'),'visible'=>!Yii::app()->user->isGuest),
 			array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-			array('label'=>'Sair  '. ucfirst(Yii::app()->user->name).'?', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+			array('label'=>'Sair ', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 		),
 	)); 	
 	echo '</div><!-- mainmenu -->';

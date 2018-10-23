@@ -75,13 +75,11 @@ class UsuarioController extends GxController {
 	}
 
 	public function actionDelete($id) {
+
 		if(Yii::app()->user->name == 'admin') {
-			if (Yii::app()->getRequest()->getIsPostRequest()) {
-				$this->loadModel($id, 'Usuarios')->delete();
-				if (!Yii::app()->getRequest()->getIsAjaxRequest())
-					$this->redirect(array('admin'));
-			} else
-				throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));		
+			    $model=Tarefas::model()->deleteAll(array("condition"=>"usuario='$id'"));;
+			    $this->loadModel($id, 'Usuarios')->delete();
+			    $this->redirect(array('Usuario/create'));
 		} else {
 			$this->redirect(array('tarefa/userHome'));
 		}	
