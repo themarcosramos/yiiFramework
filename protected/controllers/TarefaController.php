@@ -166,5 +166,4 @@ class TarefaController extends GxController {
 		));		
 	}
 
-
 }
